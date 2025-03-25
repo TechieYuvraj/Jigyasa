@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Lavishly+Yours&family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,200;0,600;0,700;1,200;1,600;1,700&display=swap');
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: #ffffff;
+    /* font-family: 'MagicSchoolOne'; */
+
+}
+
+body {
+    background-image: url(../images/theme/Hogwarts3.jpg);
+    background-size: cover; /* Cover the entire viewport */
+    background-repeat: no-repeat; /* Prevent repetition */
+    background-attachment: fixed; /* Keep background fixed on scroll */
+    background-position: center; /* Center the image */
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+@font-face {
+    font-family: "Pacifico", cursive;
+    src: url('../assets/fonts/MagicSchoolOne.ttf') format('truetype'); /* Adjust path if needed */
+}
+
+pointer-particles {
+    position: fixed;
+    z-index: 101;
+}
+
+/* Header */
+header {
+    text-align: center;
+    display: flex;
+    
+}
+
+header h1 {
+    /* font-weight: bold; */
+    font-family: "Crimson Text", serif;
+    display: flex;
+    padding-top: 15px;
+    color: #cbc9c9;
+    margin-left: 50px;
+    margin-right: auto;
+    text-shadow: rgba(255, 255, 255, 0.5);
+    font-size: 60px;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 2px; /* Adds a magical touch */
+    /* text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5); */
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 30px;
+        padding-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+header img {
+    height: 150px;
+    width: 150px;
+    margin-top: 10px;
+}
+
+.snowflake {
+    position: fixed;
+    top: -20px;
+    width: 30px;
+    height: 30px;
+    background-image: url(../images/theme/snowflake1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    user-select: none;
+    pointer-events: none;
+    animation: fall linear infinite, rotate 6s linear infinite;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+    z-index: -1;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-10px);
+    }
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+/* =======================
+   Responsive Navigation
+======================= */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 100;
+}
+
+.bar {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 5px 0;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+@media (min-width: 768px) {
+    .navigation {
+        display: none;
+    }
+}
+
+/* Hide navigation buttons on mobile */
+@media screen and (max-width: 768px) {
+    .navigation1 {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background-color: #215f7c;
+        width: 100%;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        background: #287ca3;
+        text-align: center;
+        padding: 10px 0;
+        z-index: 99;
+    }
+
+    .menu a {
+        display: block;
+        padding: 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    .menu a:last-child {
+        border-bottom: none;
+    }
+
+    .menu a:hover {
+        background-color: #1c3b4e;
+        color: #E6ECE9;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 100;
+    }
+
+    .bar {
+        width: 30px;
+        height: 4px;
+        background-color: white;
+        margin: 5px 0;
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+
+    /* Animation for menu open */
+    .menu.active {
+        display: flex;
+    }
+
+    /* X animation */
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
+
+/* =======================
+   Navigation Bar
+======================= */
+@media (min-width: 768px) {
+    .navigation1 {
+        text-align: center;
+        padding: 15px 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        gap: 35px;
+    }
+}
+
+nav { /* Phone View */
+    font-family: "Pacifico", cursive;
+    letter-spacing: 2px; /* Adds a magical touch */
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+    background-color: #215f7c;
+    padding: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+nav a { /* Desktop View */
+    font-family: "Pacifico", cursive;
+    letter-spacing: 3px; /* Adds a magical touch */
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+    color: white;
+    gap: 20px;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    font-size: 25px;
+    padding: 10px;
+    transition: 0.3s ease-in-out;
+    position: relative;
+}
+
+nav a:hover {
+    color: #E6ECE9;
+    text-shadow: 1px 1px 20px #ffffff;
+}
+
+.logo2{
+    width:  130px;
+    height: 40%;
+    margin: 0 10px;
+}
+
+
+.navigation-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Event Heading */
+.event-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #9333ea;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Event Container */
+.event-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    color: white;
+    background: purple;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: darkpurple;
+}
+
+/* Event Details Container */
+.event-details-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #215f7c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.event-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.event-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.event-info {
+    flex: 2;
+    padding: 20px;
+    font-family: 'MagicSchoolOne', serif;
+    letter-spacing: 2px; /* Adds a magical touch */
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.event-info h2 {
+    margin-top: 0;
+    font-size: 28px;
+}
+
+.event-info p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.rulebook-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #1c3b4e;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.rulebook-link:hover {
+    background-color: #0056b3;
+}
+
+/* =======================
+   Coordinators & Volunteers
+======================= */
+#coordinators h2 {
+    font-size: 45px;
+    font-family: "Pacifico", cursive;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+}
+
+.team-container {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-card {
+    background-color: #215f7c;
+    font-family: "Pacifico", cursive;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 250px;
+    text-align: center;
+    transform: perspective(1000px) rotateY(0deg);
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 10px #ffffff;
+}
+.team-card:hover {
+    transform: scale(1.05);
+}
+.team-card img {
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 3px solid #f39c12;
+}
+.team-card h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #f39c12;
+}
+.team-card p {
+    font-size: 1rem;
+    opacity: 0.8;
+    color: #ffffff;
+}

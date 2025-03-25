@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <title>Rudrika Fest</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.4/lottie.min.js"></script>
+    <link rel="stylesheet" href="assets/styles.css?v=1.1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/logo/favicon.png">
+
+
+</head>
+<body>
+
+    <!-- partial:index.partial.html -->
+    <pointer-particles></pointer-particles>
+
+    <!-- Header -->
+    <header>
+        <img src="images/logo/GIT Logo.png" alt="Rudrika Fest">
+        <h1>GLOBAL INSTITUTE OF TECHNOLOGY</h1>
+    </header>
+
+    <div id="snow-container"></div>
+
+
+    <!-- Navigation For Desktop-->
+    <nav class="navigation1">
+        <div class="navigation-btn">
+            <a href="#event" class="shrikhand-regular">Events</a>
+            <a href="#coordinators" class="shrikhand-regular">Coordinators</a>
+            <a href="#volunteers" class="shrikhand-regular">Volunteers</a>
+        </div>
+        <div class="navigation-logo">
+            <img src="images/logo/Rudrika1.png" alt="Rudrika Fest" class="logo2">
+        </div>
+        <div class="navigation-btn">
+            <a href="#gallery" class="shrikhand-regular">Gallery</a>
+            <a href="#sponsors" class="shrikhand-regular">Sponsors</a>
+            <a href="#contact" class="shrikhand-regular">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Navigation for Mobile -->
+    <nav class="navigation">
+        <div class="menu-toggle" id="mobile-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="navigation-logo">
+            <img src="images/logo/Rudrika1.png" alt="Rudrika Fest" class="logo1">
+        </div>
+        <div class="navigation-btn menu">
+            <a href="#event" class="shrikhand-regular">Events</a>
+            <a href="#coordinators" class="shrikhand-regular">Coordinators</a>
+            <a href="#volunteers" class="shrikhand-regular">Volunteers</a>
+            <a href="#gallery" class="shrikhand-regular">Gallery</a>
+            <a href="#sponsors" class="shrikhand-regular">Sponsors</a>
+            <a href="#contact" class="shrikhand-regular">Contact</a>
+        </div>
+    </nav>
+
+
+     <!-- Events Section -->
+     <section class="events-section" id="event">
+        <h2 class="event-heading">The Cultural Fest</h2>
+        <div id="event-container" class="event-container">
+            <!-- Events will be loaded dynamically here -->
+        </div>
+    </section>
+
+    <!-- Event Rules -->
+    <section id="rules" class="p-6">
+        <h2 class="text-3xl font-bold text-center mb-6">Event Rules</h2>
+        <ul class="list-disc list-inside text-center">
+            <li>Participants must arrive 30 minutes before their event.</li>
+            <li>Use of abusive language will lead to disqualification.</li>
+            <li>Judges' decision is final and binding.</li>
+        </ul>
+    </section>
+
+    <!-- Coordinators Section -->
+    <section id="coordinators">
+        <h2 class="text-3xl font-bold text-center mb-6">Coordinators</h2>
+        <div class="team-container">
+            <div class="team-card">
+                <img src="images/coordinators/1.png" alt="Coordinator">
+                <h3>Yuvraj Pratap Singh</h3>
+                <p>Event Coordinator</p>
+            </div>
+            <div class="team-card">
+                <img src="images/coordinators/2.png" alt="Coordinator">
+                <h3>Aamir Khan</h3>
+                <p>Logistics Coordinator</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteers Section -->
+    <section id="volunteers">
+        <h2 class="text-3xl font-bold text-center mb-6">Volunteers</h2>
+        <div class="team-container">
+            <div class="team-card">
+                <img src="images/volunteers/1.png" alt="Volunteer">
+                <h3>Aditya Singh</h3>
+                <p>Stage Manager</p>
+            </div>
+            <div class="team-card">
+                <img src="images/volunteers/2.png" alt="Volunteer">
+                <h3>Manish Gari</h3>
+                <p>Registration Desk</p>
+            </div>
+            <div class="team-card">
+                <img src="images/volunteers/3.png" alt="Volunteer">
+                <h3>Lakshay Limba</h3>
+                <p>Technical Support</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-container">
+        <h2 class="text-3xl font-bold mb-6 text-center">Gallery</h2>
+        <div class="slider">
+            <div class="slides">
+                <img src="images/glimpses/1.jpg" alt="Gallery Image 1">
+                <img src="images/glimpses/2.jpg" alt="Gallery Image 2">
+                <img src="images/glimpses/3.jpg" alt="Gallery Image 3">
+                <img src="images/glimpses/4.jpg" alt="Gallery Image 4">
+                <img src="images/glimpses/5.jpg" alt="Gallery Image 5">
+                <img src="images/glimpses/6.jpg" alt="Gallery Image 6">
+                <img src="images/glimpses/7.jpg" alt="Gallery Image 7">
+                <img src="images/glimpses/8.jpg" alt="Gallery Image 8">
+                <img src="images/glimpses/9.jpg" alt="Gallery Image 9">
+                <img src="images/glimpses/10.jpg" alt="Gallery Image 10">
+                <img src="images/glimpses/11.jpg" alt="Gallery Image 11">
+                <img src="images/glimpses/12.jpg" alt="Gallery Image 12">
+                <img src="images/glimpses/13.jpg" alt="Gallery Image 13">
+                <img src="images/glimpses/14.jpg" alt="Gallery Image 14">
+                <img src="images/glimpses/15.jpg" alt="Gallery Image 15">
+                <img src="images/glimpses/16.jpg" alt="Gallery Image 16">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsor Section -->
+    <section id="sponsors">
+        <h2 class="text-3xl font-bold text-center mb-6">Sponsor</h2>
+        <div class="team-container">
+            <div class="team-card">
+                <img src="images/volunteers/1.png" alt="Sponsor">
+                <h3>Aditya Singh</h3>
+                <p>Meta</p>
+            </div>
+            <div class="team-card">
+                <img src="images/volunteers/2.png" alt="Sponsor">
+                <h3>Manish Gari</h3>
+                <p>Microsoft</p>
+            </div>
+            <div class="team-card">
+                <img src="images/volunteers/3.png" alt="Sponsor">
+                <h3>Lakshay Limba</h3>
+                <p>Google</p>
+            </div>
+        </div>
+    </section>
+  
+    <!-- Footer -->
+    <footer>
+        <section class="contact-info" id="contact">
+            <h2 class="text-3xl font-bold text-center mb-6">Contact Us</h2>
+            <p class="text-center">Email: contact@rudrikafest.com</p>
+            <p class="text-center">Phone: +91 9876543210</p>
+        </section>
+        <p>&copy; 2025 Rudrika Cultural Fest. All Rights Reserved.</p>
+    </footer>
+
+    <script src="assets/script.js?v=1.1"></script>
+    <script src="assets/pointer.js?v=1.1"></script>
+</body>
+</html>
