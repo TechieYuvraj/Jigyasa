@@ -1,18 +1,19 @@
 /* Global Styles */
-@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Lavishly+Yours&family=Shrikhand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,200;0,600;0,700;1,200;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Iceberg&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap'); /* Using for headings */
+@import url('https://fonts.googleapis.com/css2?family=Iceberg&display=swap'); /* Using for normal text */
+
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* font-family: "Pacifico", cursive; */
+    font-family: "Iceberg", sans-serif;
     scroll-behavior: smooth;
 }
 
 body {
-    background-image: url(../images/theme/Hogwarts3.jpg);
+    background-image: url(../images/theme/JigyasaBG.png);
     background-size: cover; /* Cover the entire viewport */
     background-repeat: no-repeat; /* Prevent repetition */
     background-attachment: fixed; /* Keep background fixed on scroll */
@@ -20,11 +21,6 @@ body {
     color: #ffffff;
     line-height: 1.6;
     overflow-x: hidden;
-}
-
-@font-face {
-    font-family: "Pacifico", cursive;
-    src: url('../assets/fonts/MagicSchoolOne.ttf') format('truetype'); /* Adjust path if needed */
 }
 
 pointer-particles {
@@ -36,11 +32,12 @@ pointer-particles {
 header {
     text-align: center;
     display: flex;
-    
+    align-items: center;
+    width: 100%;
+    z-index: 1000;
 }
 
 header h1 {
-    /* font-weight: bold; */
     font-family: "Crimson Text", serif;
     display: flex;
     padding-top: 15px;
@@ -51,25 +48,37 @@ header h1 {
     font-size: 60px;
     align-items: center;
     justify-content: center;
-    letter-spacing: 2px; /* Adds a magical touch */
-    /* text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5); */
+    letter-spacing: 2px;
 }
 
 @media (max-width: 768px) {
     header h1 {
-        font-size: 40px;
+        font-size: 30px;
         margin-left: 20px;
         margin-right: 20px;
         text-align: center;
+        min-width: 300px;
+    }
+
+    header img {
+        height: 100px;
+        width: 100px;
+        margin-top: 10px;
     }
 }
 
 @media (max-width: 480px) {
     header h1 {
-        font-size: 30px;
+        font-size: 20px;
         padding-top: 10px;
         margin-left: 10px;
         margin-right: 10px;
+    }
+
+    header img {
+        height: 75px;
+        width: 75px;
+        margin-top: 10px;
     }
 }
 
@@ -82,31 +91,6 @@ header img {
     height: 150px;
     width: 150px;
     margin-top: 10px;
-}
-
-.snowflake {
-    position: fixed;
-    top: -20px;
-    width: 30px;
-    height: 30px;
-    background-image: url(../images/theme/snowflake1.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 0.8;
-    user-select: none;
-    pointer-events: none;
-    animation: fall linear infinite, rotate 6s linear infinite;
-    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
-    z-index: -1;
-}
-
-@keyframes fall {
-    from {
-        transform: translateY(-10px);
-    }
-    to {
-        transform: translateY(100vh);
-    }
 }
 
 /* =======================
@@ -138,7 +122,7 @@ header img {
 }
 
 /* Hide navigation buttons on mobile */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1080px) {
     .navigation1 {
         display: none;
     }
@@ -151,8 +135,9 @@ header img {
         position: sticky;
         top: 0;
         z-index: 50;
-        background-color: #215f7c;
+        background-color: #5c1875;
         width: 100%;
+        min-width: 460px;
     }
 
     .menu {
@@ -226,7 +211,7 @@ header img {
 /* =======================
    Navigation Bar
 ======================= */
-@media (min-width: 768px) {
+@media (min-width: 1080px) {
     .navigation1 {
         text-align: center;
         padding: 15px 0;
@@ -241,10 +226,10 @@ header img {
 }
 
 nav { /* Phone View */
-    font-family: "Pacifico", cursive;
-    letter-spacing: 2px; /* Adds a magical touch */
+    font-family: "Gugi", sans-serif;
+    letter-spacing: 2px;
     text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
-    background-color: #215f7c;
+    background-color: #5c1875;
     padding: 15px;
     display: flex;
     justify-content: space-evenly;
@@ -253,8 +238,8 @@ nav { /* Phone View */
 }
 
 nav a { /* Desktop View */
-    font-family: "Pacifico", cursive;
-    letter-spacing: 3px; /* Adds a magical touch */
+    font-family: "Gugi", sans-serif;
+    letter-spacing: 3px;
     text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
     color: white;
     gap: 20px;
@@ -272,9 +257,15 @@ nav a:hover {
 }
 
 .logo2{
-    width:  130px;
-    height: 40%;
+    width:  400px;
+    height: 75px;
     margin: 0 10px;
+}
+.logo1{
+    width:  350px;
+    height: 60px;
+    margin: 0 10px;
+    min-width: 349px;
 }
 
 .navigation-logo {
@@ -289,14 +280,15 @@ nav a:hover {
 section {
     padding: 60px 10%;
     text-align: center;
-    font-family: "Pacifico", cursive;
-    letter-spacing: 2px; /* Adds a magical touch */
+    letter-spacing: 2px;
     text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+    min-width: 400px;
 }
 h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
     font-weight: bold;
+    font-family: "Gugi", sans-serif;
     color: #ffffff;
     text-shadow: 0px 4px 10px rgba(0, 0, 0, 1.5);
 }
@@ -314,35 +306,37 @@ h2 {
 }
 
 .event-container img {
-    width: 100%;
+    width: 90%;
     height: 225px;
-    object-fit: fill;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
     border-radius: 10px 10px 0 0;
     margin-bottom: 20px;
 }
 
 .card {
-    background-color: #215f7c;
+    background: linear-gradient(50deg, #000000, #512368);
     padding-bottom: 20px;
     border-radius: 10px;
     text-align: center;
     transition: 0.3s;
-    font-family: "Pacifico", cursive;
-    letter-spacing: 2px; /* Adds a magical touch */
+    letter-spacing: 2px;
     text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
     position: relative;
+    border: 2px solid #ffffff;
 }
 
 .card:hover {
-    box-shadow: 0 0 20px #dcdcdc;
+    box-shadow: 0 0 30px #ffffff;
     transform: perspective(1000px) rotateY(15deg) translateY(-5px);
 }
 
 .card h3 {
     margin: 15px 0;
     font-size: 1.4rem;
-    font-family: "Pacifico", cursive;
-    letter-spacing: 2px; /* Adds a magical touch */
+    font-family: "Iceberg", sans-serif;
+    letter-spacing: 2px;
     text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
     color: #ffffff;
 }
@@ -354,13 +348,14 @@ ul {
 ul li {
     font-size: 20px;
     padding: 5px 0;
+    font-family: "Iceberg", sans-serif;
     
 }
 
 .card p {
     font-size: 1rem;
-    font-family: "Pacifico", cursive;
-    letter-spacing: 2px; /* Adds a magical touch */
+    font-family: "Iceberg", sans-serif;
+    letter-spacing: 2px;
     text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
     color: #ffffff;
 }
@@ -371,13 +366,13 @@ ul li {
     font-size: 18px;
     font-weight: bold;
     color: white;
-    background-color: #1c3b4e;
+    background-color: #3d1047;
+    font-family: "Iceberg", sans-serif;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     overflow: hidden;
     transition: 0.3s;
-    /* box-shadow: 0 4px 15px rgba(255, 0, 79, 0.5); */
 }
 
 .card button:hover {
@@ -501,8 +496,9 @@ ul li {
 .contact-info p {
     font-size: 1.2rem;
     opacity: 0.8;
-    /* color: #000; */
+    font-family: "Iceberg", sans-serif;
 }
+
 .contact-info a {
     color: #f39c12;
     text-decoration: none;
@@ -527,7 +523,7 @@ ul li {
 }
 
 .team-card {
-    background-color: #215f7c;
+    background: linear-gradient(50deg, #000000, #512368);
     padding: 20px;
     border-radius: 10px;
     min-width: 250px;
@@ -549,12 +545,14 @@ ul li {
 }
 .team-card h3 {
     font-size: 1.4rem;
+    font-family: "Gugi", sans-serif;
     font-weight: bold;
     margin-bottom: 5px;
     color: #f39c12;
 }
 .team-card p {
     font-size: 1rem;
+    font-family: "Iceberg", sans-serif;
     opacity: 0.8;
 }
 
@@ -572,21 +570,23 @@ ul li {
     font-size: 50px;
     margin-bottom: 20px;
     font-weight: 600;
-    font-family: "Pacifico", cursive;
-    letter-spacing: 2px; /* Adds a magical touch */
+    font-family: "Gugi", sans-serif;
+    letter-spacing: 2px;
     text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+    min-width: 410px;
 }
 
 /* ============================= */
 /*           FOOTER STYLES       */
 /* ============================= */
 footer {
-    background-color: #215f7c; ;
+    background-color: #5c1875; ;
     text-align: center;
     padding-bottom: 15px;
-    font-family: "Pacifico", cursive;
-    letter-spacing: 2px; /* Adds a magical touch */
+    font-family: "Gugi", sans-serif;
+    letter-spacing: 2px;
     text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+    min-width: 400px;
 }
 
 
@@ -613,6 +613,7 @@ footer {
     .event-container {
         flex-direction: column;
         align-items: center;
+        min-width: 400px;
     }
 
     .card {

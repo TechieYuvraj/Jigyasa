@@ -3,126 +3,126 @@
 // =============================
 const events = [
     {
-        id: "beat-drop",
-        title: "Beat-Drop",
-        date: "February 19, 2025",
-        time: "08:00 PM - 10:00 PM",
-        venue: "OAT",
+        id: "Ideathon",
+        title: "Ideathon",
+        date: "April 16, 2025",
+        time: "10:00 AM - 01:00 PM",
+        venue: "To be announced",
         image: "images/events/BeatDrop.jpg",
         ruleBook: "files/rawaz-rules.pdf",
-        description: "Beat-Drop is a dazzling fashion show that showcases talent and style.",
+        description: "A platform for innovative thinkers to present groundbreaking ideas that solve real-world problems. Participants pitch their concepts to a panel of judges.",
         coordinators: [
             { name: "Harshvardhan Singh", contact: "+91 81122 80766" },
             { name: "yuvraj Pratap Singh", contact: "+91 739826246" }
         ]
     },
     {
-        id: "Singing",
-        title: "Singing",
-        date: "March 15, 2025",
+        id: "Debate",
+        title: "Debate",
+        date: "April 16, 2025",
         time: "10:00 AM - 05:00 PM",
-        venue: "Main Auditorium",
+        venue: "To be announced",
         image: "images/events/Singing.jpg",
         ruleBook: "files/techfest-rules.pdf",
-        description: "Tech Fest is a showcase of innovation, technology, and competition.",
+        description: "A battle of intellect and arguments where participants defend or oppose a given topic with logic, evidence, and persuasion.",
         coordinators: [
             { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
             { name: "Bob Williams", contact: "+91 8877665544" }
         ]
     },
     {
-        id: "xFactor",
-        title: "xFactor",
-        date: "March 15, 2025",
+        id: "Minute to Code",
+        title: "Minute to Code",
+        date: "April 16, 2025",
         time: "10:00 AM - 05:00 PM",
-        venue: "Main Auditorium",
+        venue: "To be announced",
         image: "images/events/xFactor.jpg",
         ruleBook: "files/techfest-rules.pdf",
-        description: "Tech Fest is a showcase of innovation, technology, and competition.",
+        description: "A coding challenge that tests speed, logic, and problem-solving skills within a limited time frame.",
         coordinators: [
             { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
             { name: "Bob Williams", contact: "+91 8877665544" }
         ]
     },
     {
-        id: "Drama",
-        title: "Drama",
-        date: "March 15, 2025",
+        id: "Minute to Pitch",
+        title: "Minute to Pitch",
+        date: "April 16, 2025",
         time: "10:00 AM - 05:00 PM",
-        venue: "Main Auditorium",
+        venue: "To be announced",
         image: "images/events/Drama.jpg",
         ruleBook: "files/techfest-rules.pdf",
-        description: "Tech Fest is a showcase of innovation, technology, and competition.",
+        description: "A fast-paced competition where participants have just one minute to deliver a compelling pitch on a given topic or idea.",
         coordinators: [
             { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
             { name: "Bob Williams", contact: "+91 8877665544" }
         ]
     },
     {
-        id: "BeatBoxing",
-        title: "Beat Boxing",
-        date: "March 15, 2025",
+        id: "Poster Making",
+        title: "Poster Making",
+        date: "April 16, 2025",
         time: "10:00 AM - 05:00 PM",
-        venue: "Main Auditorium",
+        venue: "To be announced",
         image: "images/events/BeatBox.jpg",
         ruleBook: "files/techfest-rules.pdf",
-        description: "Tech Fest is a showcase of innovation, technology, and competition.",
+        description: "A creative event where participants visually express ideas and themes through artistic poster designs.",
         coordinators: [
             { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
             { name: "Bob Williams", contact: "+91 8877665544" }
         ]
     },
     {
-        id: "DJwar",
-        title: "DJ war",
-        date: "March 15, 2025",
+        id: "BGMI",
+        title: "BGMI",
+        date: "April 16, 2025",
         time: "10:00 AM - 05:00 PM",
-        venue: "Main Auditorium",
+        venue: "To be announced",
         image: "images/events/DJwar.jpg",
         ruleBook: "files/techfest-rules.pdf",
-        description: "Tech Fest is a showcase of innovation, technology, and competition.",
+        description: "Survival battle royale, where only the best can claim victory.",
         coordinators: [
             { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
             { name: "Bob Williams", contact: "+91 8877665544" }
         ]
     },
     {
-        id: "Band",
-        title: "Band",
-        date: "March 15, 2025",
+        id: "Free Fire",
+        title: "Free Fire",
+        date: "April 16, 2025",
         time: "10:00 AM - 05:00 PM",
-        venue: "Main Auditorium",
+        venue: "To be announced",
         image: "images/events/Band.jpg",
         ruleBook: "files/techfest-rules.pdf",
-        description: "Tech Fest is a showcase of innovation, technology, and competition.",
+        description: "A test of reflexes and survival instincts in an action-packed battle royale.",
         coordinators: [
             { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
             { name: "Bob Williams", contact: "+91 8877665544" }
         ]
     },
     {
-        id: "Case Investigation",
-        title: "Case Investigation",
-        date: "March 15, 2025",
+        id: "Valorant",
+        title: "Valorant",
+        date: "April 16, 2025",
         time: "10:00 AM - 05:00 PM",
-        venue: "Main Auditorium",
+        venue: "To be announced",
         image: "images/events/CaseInvest.jpg",
         ruleBook: "files/techfest-rules.pdf",
-        description: "Tech Fest is a showcase of innovation, technology, and competition.",
+        description: "Tactical 5v5 shooter where precision and strategy decide the winner.",
         coordinators: [
             { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
             { name: "Bob Williams", contact: "+91 8877665544" }
         ]
     },
     {
-        id: "Fashion Show",
-        title: "Fashion Show",
-        date: "March 15, 2025",
+        id: "Domain Tech Fair",
+        title: "Domain Tech Fair",
+        date: "April 17, 2025",
         time: "10:00 AM - 05:00 PM",
-        venue: "Main Auditorium",
-        image: "images/events/FashionShow.jpg",
+        venue: "To be announced",
+        image: "images/events/CaseInvest.jpg",
         ruleBook: "files/techfest-rules.pdf",
-        description: "Tech Fest is a showcase of innovation, technology, and competition.",
+        description: "A showcase of emerging technologies, projects, and innovations in various technical domains, offering a platform for networking and learning.",
         coordinators: [
             { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
             { name: "Bob Williams", contact: "+91 8877665544" }
@@ -232,28 +232,28 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-function createSnowflake() {
-    const snowflake = document.createElement("div");
-    snowflake.classList.add("snowflake"); // No inner HTML needed
-    document.body.appendChild(snowflake);
+// function createSnowflake() {
+//     const snowflake = document.createElement("div");
+//     snowflake.classList.add("snowflake"); // No inner HTML needed
+//     document.body.appendChild(snowflake);
 
-    // Random properties
-    let size = Math.random() * 20 + 10 + "px"; // Vary size
-    let left = Math.random() * window.innerWidth + "px";
-    let duration = Math.random() * 5 + 3 + "s"; // Random fall speed
-    let rotation = Math.random() * 360 + "deg"; // Random rotation start
+//     // Random properties
+//     let size = Math.random() * 20 + 10 + "px"; // Vary size
+//     let left = Math.random() * window.innerWidth + "px";
+//     let duration = Math.random() * 5 + 3 + "s"; // Random fall speed
+//     let rotation = Math.random() * 360 + "deg"; // Random rotation start
 
-    // Apply styles
-    snowflake.style.left = left;
-    snowflake.style.width = size;
-    snowflake.style.height = size;
-    snowflake.style.animationDuration = duration;
+//     // Apply styles
+//     snowflake.style.left = left;
+//     snowflake.style.width = size;
+//     snowflake.style.height = size;
+//     snowflake.style.animationDuration = duration;
 
-    // Remove snowflake after animation ends
-    setTimeout(() => {
-        snowflake.remove();
-    }, parseFloat(duration) * 1000);
-}
+//     // Remove snowflake after animation ends
+//     setTimeout(() => {
+//         snowflake.remove();
+//     }, parseFloat(duration) * 1000);
+// }
 
-// Create snowflakes at intervals
-setInterval(createSnowflake, 200);
+// // Create snowflakes at intervals
+// setInterval(createSnowflake, 200);
