@@ -9,7 +9,7 @@ const events = [
         time: "10:00 AM - 01:00 PM",
         venue: "To be announced",
         image: "images/events/BeatDrop.jpg",
-        ruleBook: "files/rawaz-rules.pdf",
+        ruleBook: "../register.html",
         description: "A platform for innovative thinkers to present groundbreaking ideas that solve real-world problems. Participants pitch their concepts to a panel of judges.",
         coordinators: [
             { name: "Harshvardhan Singh", contact: "+91 81122 80766" },
@@ -23,7 +23,7 @@ const events = [
         time: "10:00 AM - 05:00 PM",
         venue: "To be announced",
         image: "images/events/Singing.jpg",
-        ruleBook: "files/techfest-rules.pdf",
+        ruleBook: "../register.html",
         description: "A battle of intellect and arguments where participants defend or oppose a given topic with logic, evidence, and persuasion.",
         coordinators: [
             { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
@@ -37,7 +37,7 @@ const events = [
         time: "10:00 AM - 05:00 PM",
         venue: "To be announced",
         image: "images/events/xFactor.jpg",
-        ruleBook: "files/techfest-rules.pdf",
+        ruleBook: "../register.html",
         description: "A coding challenge that tests speed, logic, and problem-solving skills within a limited time frame.",
         coordinators: [
             { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
@@ -51,7 +51,7 @@ const events = [
         time: "10:00 AM - 05:00 PM",
         venue: "To be announced",
         image: "images/events/Drama.jpg",
-        ruleBook: "files/techfest-rules.pdf",
+        ruleBook: "../register.html",
         description: "A fast-paced competition where participants have just one minute to deliver a compelling pitch on a given topic or idea.",
         coordinators: [
             { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
@@ -65,7 +65,7 @@ const events = [
         time: "10:00 AM - 05:00 PM",
         venue: "To be announced",
         image: "images/events/BeatBox.jpg",
-        ruleBook: "files/techfest-rules.pdf",
+        ruleBook: "../register.html",
         description: "A creative event where participants visually express ideas and themes through artistic poster designs.",
         coordinators: [
             { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
@@ -79,7 +79,7 @@ const events = [
         time: "10:00 AM - 05:00 PM",
         venue: "To be announced",
         image: "images/events/DJwar.jpg",
-        ruleBook: "files/techfest-rules.pdf",
+        ruleBook: "../register.html",
         description: "Survival battle royale, where only the best can claim victory.",
         coordinators: [
             { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
@@ -93,7 +93,7 @@ const events = [
         time: "10:00 AM - 05:00 PM",
         venue: "To be announced",
         image: "images/events/Band.jpg",
-        ruleBook: "files/techfest-rules.pdf",
+        ruleBook: "../register.html",
         description: "A test of reflexes and survival instincts in an action-packed battle royale.",
         coordinators: [
             { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
@@ -107,7 +107,7 @@ const events = [
         time: "10:00 AM - 05:00 PM",
         venue: "To be announced",
         image: "images/events/CaseInvest.jpg",
-        ruleBook: "files/techfest-rules.pdf",
+        ruleBook: "../register.html",
         description: "Tactical 5v5 shooter where precision and strategy decide the winner.",
         coordinators: [
             { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
@@ -121,7 +121,7 @@ const events = [
         time: "10:00 AM - 05:00 PM",
         venue: "To be announced",
         image: "images/events/CaseInvest.jpg",
-        ruleBook: "files/techfest-rules.pdf",
+        ruleBook: "../register.html",
         description: "A showcase of emerging technologies, projects, and innovations in various technical domains, offering a platform for networking and learning.",
         coordinators: [
             { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
