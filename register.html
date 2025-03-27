@@ -1,191 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="assets/register.css?v=1.3">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jigyasa Event Registration</title>
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="register.css?v=1.3">
 </head>
-
 <body>
-    <h2>Jigyasa Event Registration</h2>
-
-    <form id="registrationForm">
-        <label>Event:</label>
-        <select id="event" required>
-            <option value="Ideathon">Ideathon</option>
-            <option value="Debate">Debate</option>
-            <option value="Minute to Pitch">Minute to Pitch</option>
-            <option value="Minute to Code">Minute to Code</option>
-            <option value="Domain Tech Fair">Domain Tech Fair</option>
-            <option value="Valorant">Valorant</option>
-            <option value="BGMI">BGMI</option>
-            <option value="Free Fire">Free Fire</option>
-            <option value="Poster Making">Poster Making</option>
-        </select><br><br>
-
-        <label>Leader Name:</label>
-        <input type="text" id="leaderName" required><br><br>
-
-        <label>Email:</label>
-        <input type="email" id="email" required><br><br>
-
-        <label>Phone No.:</label>
-        <input type="tel" id="phone" required><br><br>
-
-        <label>Team Name (if applicable):</label>
-        <input type="text" id="teamName"><br><br>
-
-        <label>Team Size:</label>
-        <select id="teamSize" required>
-            <option value="Solo">Solo</option>
-            <option value="Duo">Duo</option>
-            <option value="Three">Trio</option>
-            <option value="Four">Squad</option>
-            <option value="Five">Five</option>
-        </select><br><br>
-
-        <div id="memberDetails"></div>
-
-        <label>Payment QR Code:</label>
-        <img src="/images/payment/payment1.jpg" width="200"><br><br>
-
-        <label>UTR No.:</label>
-        <input type="text" id="utr" required><br><br>
-
-        <button type="submit">Submit</button>
-    </form>
-
-    <p id="successMessage" class="hidden">Thank you! Your registration was successful.</p>
-
-    <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const form = document.getElementById("registrationForm");
-        const eventSelect = document.getElementById("event");
-        const teamSizeSelect = document.getElementById("teamSize");
-        const memberDetailsDiv = document.getElementById("memberDetails");
-
-        // Mapping team size text to a numeric value
-        const teamSizeMapping = {
-            "Solo": 1,
-            "Duo": 2,
-            "Trio": 3,
-            "Squad": 4,
-            "Five": 5,
-            "Three": 3,
-            "Four": 4
-        };
-
-        function updateTeamSizeOptions() {
-            const event = eventSelect.value;
-            teamSizeSelect.innerHTML = ""; // Clear previous options
-
-            let teamSizes = [];
-
-            switch (event) {
-                case "Ideathon":
-                    teamSizes = ["Solo", "Duo", "Trio", "Squad"];
-                    break;
-                case "Debate":
-                case "Minute to Code":
-                case "Poster Making":
-                    teamSizes = ["Solo"];
-                    break;
-                case "Minute to Pitch":
-                    teamSizes = ["Solo", "Duo"];
-                    break;
-                case "BGMI":
-                case "Free Fire":
-                    teamSizes = ["Squad"];
-                    break;
-                case "Valorant":
-                    teamSizes = ["Five"];
-                    break;
-                case "Domain Tech Fair":
-                    teamSizes = ["Solo", "Duo", "Three", "Four", "Five"];
-                    break;
-                default:
-                    teamSizes = ["Solo"];
-            }
-
-            // Populate dropdown
-            teamSizes.forEach(size => {
-                let option = document.createElement("option");
-                option.value = size;
-                option.textContent = size;
-                teamSizeSelect.appendChild(option);
-            });
-
-            // Disable dropdown if only one option is available
-            teamSizeSelect.disabled = teamSizes.length === 1;
-
-            updateMemberFields();
-        }
-
-        function updateMemberFields() {
-            const teamSizeText = teamSizeSelect.value;
-            const teamSize = teamSizeMapping[teamSizeText] || 1; // Default to 1 if undefined
-            memberDetailsDiv.innerHTML = ""; // Clear previous fields
-
-            for (let i = 1; i < teamSize; i++) { // Start from 1 since leader is included
-                const memberDiv = document.createElement("div");
-                memberDiv.classList.add("member-field");
-                memberDiv.innerHTML = `
-                    <label>Member ${i} Name:</label>
-                    <input type="text" class="memberName" required><br><br>
-                    <label>Member ${i} Email:</label>
-                    <input type="email" class="memberEmail" required><br><br>
-                    <label>Member ${i} Phone No.:</label>
-                    <input type="tel" class="memberPhone" required><br><br>
-                `;
-                memberDetailsDiv.appendChild(memberDiv);
-            }
-        }
-
-        eventSelect.addEventListener("change", updateTeamSizeOptions);
-        teamSizeSelect.addEventListener("change", updateMemberFields);
-
-        // Initialize defaults on page load
-        updateTeamSizeOptions();
-
-        form.addEventListener("submit", async function (event) {
-            event.preventDefault();
-
-            let memberNames = Array.from(document.querySelectorAll(".memberName")).map(input => input.value);
-            let memberPhones = Array.from(document.querySelectorAll(".memberPhone")).map(input => input.value);
-            let memberEmails = Array.from(document.querySelectorAll(".memberEmail")).map(input => input.value);
-
-            const formData = {
-                event: eventSelect.value,
-                leaderName: document.getElementById("leaderName").value,
-                email: document.getElementById("email").value,
-                phone: document.getElementById("phone").value,
-                teamName: document.getElementById("teamName").value,
-                teamSize: teamSizeSelect.value,
-                memberNames: memberNames,
-                memberPhones: memberPhones,
-                memberEmails: memberEmails,
-                utr: document.getElementById("utr").value
-            };
-
-            const response = await fetch("https://script.google.com/macros/s/AKfycbzSKdKXokKT5pHWvDAaeqYCu9ZQ8KASUedzlOBPGa1tHM91z9UFNKy1Xy0r3lDqbUA/exec", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(formData),
-                mode: 'no-cors'
-            });
-
-            // Redirect on success (since no-cors mode won't return a response)
-            document.getElementById("successMessage").classList.remove("hidden");
-            setTimeout(() => {
-                window.location.href = "https://rtunotes.in"; // Redirect
-            }, 3000);
-        });
-    });
-</script>
-
-
+    <div class="container">
+        <h2>Event Registration</h2>
+        <form id="registrationForm">
+            <label for="event">Select Event:</label>
+            <select id="event" required>
+                <option value="Ideathon">Ideathon</option>
+                <option value="Debate">Debate</option>
+                <option value="Minute to Code">Minute to Code</option>
+                <option value="Poster Making">Poster Making</option>
+                <option value="Minute to Pitch">Minute to Pitch</option>
+                <option value="BGMI">BGMI</option>
+                <option value="Free Fire">Free Fire</option>
+                <option value="Valorant">Valorant</option>
+                <option value="Domain Tech Fair">Domain Tech Fair</option>
+            </select><br><br>
+            
+            <label for="teamSize">Team Size:</label>
+            <select id="teamSize" required></select><br><br>
+            
+            <label for="leaderName">Leader Name:</label>
+            <input type="text" id="leaderName" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" required><br><br>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" required><br><br>
+            
+            <label for="teamName">Team Name:</label>
+            <input type="text" id="teamName"><br><br>
+            
+            <div id="memberDetails"></div>
+            
+            <button type="submit">Pay & Register</button>
+        </form>
+        <p id="successMessage" class="hidden">Registration Successful! Redirecting...</p>
+    </div>
+    
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="register.js?v=1.3"></script>
 </body>
-
 </html>
