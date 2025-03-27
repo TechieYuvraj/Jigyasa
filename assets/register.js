@@ -1,10 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("registrationForm");
-    const eventSelect = document.getElementById("event");
-    const teamSizeSelect = document.getElementById("teamSize");
+    const eventSelect = document.getElementById("event"); // Ensure this ID matches the dropdown for event selection in your HTML
+    const teamSizeSelect = document.getElementById("teamSize"); // Ensure this ID matches the dropdown for team size in your HTML
     const memberDetailsDiv = document.getElementById("memberDetails");
 
-    // Mapping team size text to a numeric value
     const teamSizeMapping = {
         "Solo": 1,
         "Duo": 2,
@@ -15,8 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function updateTeamSizeOptions() {
         const event = eventSelect.value;
-        teamSizeSelect.innerHTML = ""; // Clear previous options
-
+        teamSizeSelect.innerHTML = "";
         let teamSizes = [];
 
         switch (event) {
@@ -39,13 +37,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 teamSizes = ["Five"];
                 break;
             case "Domain Tech Fair":
-                teamSizes = ["Solo", "Duo", "Three", "Four", "Five"];
+                teamSizes = ["Solo", "Duo", "Trio", "Squad", "Five"];
                 break;
             default:
                 teamSizes = ["Solo"];
         }
 
-        // Populate dropdown
         teamSizes.forEach(size => {
             let option = document.createElement("option");
             option.value = size;
@@ -53,18 +50,16 @@ document.addEventListener("DOMContentLoaded", function () {
             teamSizeSelect.appendChild(option);
         });
 
-        // Disable dropdown if only one option is available
         teamSizeSelect.disabled = teamSizes.length === 1;
-
         updateMemberFields();
     }
 
     function updateMemberFields() {
         const teamSizeText = teamSizeSelect.value;
-        const teamSize = teamSizeMapping[teamSizeText] || 1; // Default to 1 if undefined
-        memberDetailsDiv.innerHTML = ""; // Clear previous fields
+        const teamSize = teamSizeMapping[teamSizeText] || 1;
+        memberDetailsDiv.innerHTML = "";
 
-        for (let i = 1; i < teamSize; i++) { // Start from 1 since leader is included
+        for (let i = 1; i < teamSize; i++) {
             const memberDiv = document.createElement("div");
             memberDiv.classList.add("member-field");
             memberDiv.innerHTML = `
@@ -81,8 +76,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     eventSelect.addEventListener("change", updateTeamSizeOptions);
     teamSizeSelect.addEventListener("change", updateMemberFields);
-
-    // Initialize defaults on page load
     updateTeamSizeOptions();
 
     form.addEventListener("submit", async function (event) {
@@ -102,13 +95,11 @@ document.addEventListener("DOMContentLoaded", function () {
             memberNames: memberNames,
             memberPhones: memberPhones,
             memberEmails: memberEmails,
-            // utr: document.getElementById("utr").value
         };
 
-        let amount = 100 * 100; // Amount in paise (100 INR)
-
+        let amount = 100 * 100;
         var options = {
-            key: "rzp_test_r1RvWzed4H1SDO", // Replace with your Razorpay Key ID
+            key: "rzp_test_r1RvWzed4H1SDO",
             amount: amount,
             currency: "INR",
             name: "Rudrika Fest",
@@ -124,7 +115,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     mode: 'no-cors'
                 });
 
-                // Show success message and redirect
                 document.getElementById("successMessage").classList.remove("hidden");
                 setTimeout(() => {
                     window.location.href = "../index.html";

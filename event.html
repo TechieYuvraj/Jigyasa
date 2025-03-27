@@ -17,6 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/logo/favicon.png">
 
 </head>
 
@@ -103,17 +104,6 @@
 
     <script src="assets/script.js?v=1.1"></script>
     <script src="assets/pointer.js?v=1.1"></script>
-    <script>
-        function loadComponent(id, file) {
-            fetch(file)
-                .then(response => response.text())
-                .then(data => document.getElementById(id).innerHTML = data);
-        }
-
-        // Load header.html into #header div
-        loadComponent("header", "header.html");
-    </script>
-
 </body>
 
 </html>
