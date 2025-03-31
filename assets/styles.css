@@ -259,7 +259,7 @@ nav a:hover {
 .logo2{
     width:  400px;
     height: 75px;
-    margin: 0 10px;
+    margin: 0 -30px;
 }
 .logo1{
     width:  350px;
@@ -319,6 +319,7 @@ h2 {
     background: linear-gradient(50deg, #000000, #512368);
     padding-bottom: 20px;
     border-radius: 10px;
+    min-width: 200px;
     text-align: center;
     transition: 0.3s;
     letter-spacing: 2px;

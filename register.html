@@ -1,52 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Registration</title>
-    <link rel="stylesheet" href="/assets/register.css?v=1.3">
-    <link rel="icon" type="image/png" href="/images/logo/favicon.png">
+    <link rel="stylesheet" href="/assets/register.css?v=2.2">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
 </head>
+
 <body>
-    <div class="container">
-        <h2>Event Registration</h2>
-        <form id="registrationForm">
-            <label for="event">Select Event:</label>
-            <select id="event" required>
-                <option value="Ideathon">Ideathon</option>
-                <option value="Debate">Debate</option>
-                <option value="Minute to Code">Minute to Code</option>
-                <option value="Poster Making">Poster Making</option>
-                <option value="Minute to Pitch">Minute to Pitch</option>
-                <option value="BGMI">BGMI</option>
-                <option value="Free Fire">Free Fire</option>
-                <option value="Valorant">Valorant</option>
-                <option value="Domain Tech Fair">Domain Tech Fair</option>
-            </select><br><br>
-            
-            <label for="teamSize">Team Size:</label>
-            <select id="teamSize" required></select><br><br>
-            
-            <label for="leaderName">Leader Name:</label>
-            <input type="text" id="leaderName" required><br><br>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" required><br><br>
-            
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" required><br><br>
-            
-            <label for="teamName">Team Name:</label>
-            <input type="text" id="teamName"><br><br>
-            
-            <div id="memberDetails"></div>
-            
-            <button type="submit">Pay & Register</button>
-        </form>
-        <p id="successMessage" class="hidden">Registration Successful! Redirecting...</p>
-    </div>
-    
-    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-    <script src="/assets/register.js"></script>
+
+    <!-- partial:index.partial.html -->
+    <pointer-particles></pointer-particles>
+
+    <div id="snow-container"></div>
+
+    <h2>Event Registration</h2>
+    <form id="eventForm">
+        <label>Select Event:</label>
+        <select id="eventSelect" name="eventName" required>
+            <option value="" disabled selected>--Choose Event--</option>
+            <option value="Euphonic Echoes">Euphonic Echoes (Singing)</option>
+            <option value="Majestic Threads">Majestic Threads (Fashion Show)</option>
+            <option value="Blaze the Stage">Blaze the Stage (Dancing)</option>
+            <option value="Theatrical Thunder">Theatrical Thunder (Drama)</option>
+            <option value="Rock the Stage">Rock the Stage (Band)</option>
+            <option value="Turntable Titans">Turntable Titans (DJ War)</option>
+            <option value="Beyond the Spotlight">Beyond the Spotlight (XFactor)</option>
+            <option value="Vocal Vertex">Vocal Vertex (Beat Boxing)</option>
+        </select>
+
+        <label>Team Type:</label>
+        <select id="teamType" name="teamType" required>
+            <option value="" disabled selected>Select Team Type</option>
+            <option value="solo">Solo</option>
+            <option value="duo">Duo</option>
+            <option value="group">Group</option>
+        </select>
+
+        <label id="teamSizeLabel">Team Size:</label>
+        <select id="teamSize" name="teamSize"></select>
+
+        <label>Team Leader Name:</label>
+        <input type="text" id="leaderName" name="leaderName" required>
+
+        <label>Leader Mobile Number:</label>
+        <input type="text" id="leaderMobile" name="leaderMobile" required pattern="[6-9][0-9]{9}"
+            title="Enter a valid 10-digit mobile number">
+
+        <label>Leader Email:</label>
+        <input type="email" id="leaderEmail" name="leaderEmail" required
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Enter a valid email address">
+
+        <div id="memberDetails" class="hidden"></div>
+
+        <label>Payment:</label>
+        <a id="paymentLink" href="#" target="_blank">Pay Now</a>
+
+        <button id="generateQR">Click to Scan</button>
+        <div id="qrCodeContainer" style="margin-top: 10px;"></div>
+        
+        <label>UTR Number:</label>
+        <input type="text" id="utrNumber" name="utrNumber" required>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="/assets/register.js?v=2.2"></script>
+    <Script src="/assets/pointer.js?v=2.2"></Script>
 </body>
+
 </html>

@@ -8,7 +8,7 @@ const events = [
         date: "April 16, 2025",
         time: "10:00 AM - 01:00 PM",
         venue: "To be announced",
-        image: "images/events/BeatDrop.jpg",
+        image: "images/events/ideathon.png",
         ruleBook: "../register.html",
         description: "A platform for innovative thinkers to present groundbreaking ideas that solve real-world problems. Participants pitch their concepts to a panel of judges.",
         coordinators: [
@@ -22,7 +22,7 @@ const events = [
         date: "April 16, 2025",
         time: "10:00 AM - 05:00 PM",
         venue: "To be announced",
-        image: "images/events/Singing.jpg",
+        image: "images/events/debate.png",
         ruleBook: "../register.html",
         description: "A battle of intellect and arguments where participants defend or oppose a given topic with logic, evidence, and persuasion.",
         coordinators: [
@@ -36,7 +36,7 @@ const events = [
         date: "April 16, 2025",
         time: "10:00 AM - 05:00 PM",
         venue: "To be announced",
-        image: "images/events/xFactor.jpg",
+        image: "images/events/MinuteToCode.png",
         ruleBook: "../register.html",
         description: "A coding challenge that tests speed, logic, and problem-solving skills within a limited time frame.",
         coordinators: [
@@ -50,7 +50,7 @@ const events = [
         date: "April 16, 2025",
         time: "10:00 AM - 05:00 PM",
         venue: "To be announced",
-        image: "images/events/Drama.jpg",
+        image: "images/events/minute-to-pitch.png",
         ruleBook: "../register.html",
         description: "A fast-paced competition where participants have just one minute to deliver a compelling pitch on a given topic or idea.",
         coordinators: [
@@ -64,7 +64,7 @@ const events = [
         date: "April 16, 2025",
         time: "10:00 AM - 05:00 PM",
         venue: "To be announced",
-        image: "images/events/BeatBox.jpg",
+        image: "images/events/posterdesign.png",
         ruleBook: "../register.html",
         description: "A creative event where participants visually express ideas and themes through artistic poster designs.",
         coordinators: [
@@ -78,7 +78,7 @@ const events = [
         date: "April 16, 2025",
         time: "10:00 AM - 05:00 PM",
         venue: "To be announced",
-        image: "images/events/DJwar.jpg",
+        image: "images/events/bgmi.jpg",
         ruleBook: "../register.html",
         description: "Survival battle royale, where only the best can claim victory.",
         coordinators: [
@@ -92,7 +92,7 @@ const events = [
         date: "April 16, 2025",
         time: "10:00 AM - 05:00 PM",
         venue: "To be announced",
-        image: "images/events/Band.jpg",
+        image: "images/events/free-fire.webp",
         ruleBook: "../register.html",
         description: "A test of reflexes and survival instincts in an action-packed battle royale.",
         coordinators: [
@@ -106,7 +106,7 @@ const events = [
         date: "April 16, 2025",
         time: "10:00 AM - 05:00 PM",
         venue: "To be announced",
-        image: "images/events/CaseInvest.jpg",
+        image: "images/events/valorant.png",
         ruleBook: "../register.html",
         description: "Tactical 5v5 shooter where precision and strategy decide the winner.",
         coordinators: [
@@ -120,7 +120,7 @@ const events = [
         date: "April 17, 2025",
         time: "10:00 AM - 05:00 PM",
         venue: "To be announced",
-        image: "images/events/CaseInvest.jpg",
+        image: "images/events/domain.svg",
         ruleBook: "../register.html",
         description: "A showcase of emerging technologies, projects, and innovations in various technical domains, offering a platform for networking and learning.",
         coordinators: [
@@ -231,29 +231,3 @@ document.addEventListener("DOMContentLoaded", function() {
         mobileMenu.classList.toggle("active");
     });
 });
-
-// function createSnowflake() {
-//     const snowflake = document.createElement("div");
-//     snowflake.classList.add("snowflake"); // No inner HTML needed
-//     document.body.appendChild(snowflake);
-
-//     // Random properties
-//     let size = Math.random() * 20 + 10 + "px"; // Vary size
-//     let left = Math.random() * window.innerWidth + "px";
-//     let duration = Math.random() * 5 + 3 + "s"; // Random fall speed
-//     let rotation = Math.random() * 360 + "deg"; // Random rotation start
-
-//     // Apply styles
-//     snowflake.style.left = left;
-//     snowflake.style.width = size;
-//     snowflake.style.height = size;
-//     snowflake.style.animationDuration = duration;
-
-//     // Remove snowflake after animation ends
-//     setTimeout(() => {
-//         snowflake.remove();
-//     }, parseFloat(duration) * 1000);
-// }
-
-// // Create snowflakes at intervals
-// setInterval(createSnowflake, 200);
