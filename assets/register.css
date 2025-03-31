@@ -1,7 +1,7 @@
 /* Global Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    background: url('/images/theme/Hogwarts3.jpg') no-repeat center center fixed;
+    background: url('/images/theme/JigyasaBG.png') no-repeat center center fixed;
     background-size: cover;
     margin: 0;
     padding: 0;
@@ -132,7 +132,6 @@ button {
     transition: 0.3s;
 }
 
-
 button:hover {
     background: #1e6091;
 }
@@ -148,34 +147,6 @@ button:hover {
         width: 95%;
     }
 }
-
-.snowflake {
-    position: fixed;
-    top: -20px;
-    width: 30px;
-    height: 30px;
-    background-image: url(../images/theme/snowflake1.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 0.8;
-    user-select: none;
-    pointer-events: none;
-    animation: fall linear infinite, rotate 6s linear infinite;
-    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
-    z-index: -1;
-}
-
-@keyframes fall {
-    from {
-        transform: translateY(-10px);
-        left: random(100vw);
-    }
-    to {
-        transform: translateY(100vh);
-        left: random(100vw);
-    }
-}
-
 
 pointer-particles {
     position: fixed;
