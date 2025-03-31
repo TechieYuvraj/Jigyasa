@@ -292,7 +292,7 @@ h2 {
     background: linear-gradient(50deg, #000000, #512368);
     padding-bottom: 20px;
     border-radius: 10px;
-    min-width: 200px;
+    min-width: 290px;
     text-align: center;
     transition: 0.3s;
     letter-spacing: 2px;
@@ -557,10 +557,10 @@ footer {
     background-color: #5c1875; ;
     text-align: center;
     padding-bottom: 15px;
-    font-family: "Gugi", sans-serif;
-    letter-spacing: 2px;
+    font-family: "Playfair Display", serif;
+    letter-spacing: 2px; /* Adds a magical touch */
     text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
-    min-width: 400px;
+    min-width: 460px;
 }
 
 
