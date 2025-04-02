@@ -169,7 +169,7 @@ class PointerParticle {
       this.timePrevious = timeNow - excessTime;
   
       this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-      this.hue = this.hue > 200 ? 180 : (this.hue += 1);
+      this.hue = this.hue > 80 ? 60 : (this.hue += 1);
   
       this.handleParticles();
     }
