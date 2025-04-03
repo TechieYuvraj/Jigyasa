@@ -10,7 +10,7 @@ const events = [
         venue: "To be announced",
         image: "images/events/ideathon.png",
         ruleBook: "../register.html",
-        register: "../register.html",
+        register: "register.html",
         description: "A platform for innovative thinkers to present groundbreaking ideas that solve real-world problems. Participants pitch their concepts to a panel of judges.",
         coordinators: [
             { name: "Harshvardhan Singh", contact: "+91 81122 80766" },
@@ -25,7 +25,7 @@ const events = [
         venue: "To be announced",
         image: "images/events/debate.png",
         ruleBook: "../register.html",
-        register: "../register.html",
+        register: "register.html",
         description: "A battle of intellect and arguments where participants defend or oppose a given topic with logic, evidence, and persuasion.",
         coordinators: [
             { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
@@ -40,7 +40,7 @@ const events = [
         venue: "To be announced",
         image: "images/events/MinuteToCode.png",
         ruleBook: "../register.html",
-        register: "../register.html",
+        register: "register.html",
         description: "A coding challenge that tests speed, logic, and problem-solving skills within a limited time frame.",
         coordinators: [
             { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
@@ -55,7 +55,7 @@ const events = [
         venue: "To be announced",
         image: "images/events/minute-to-pitch.png",
         ruleBook: "../register.html",
-        register: "../register.html",
+        register: "register.html",
         description: "A fast-paced competition where participants have just one minute to deliver a compelling pitch on a given topic or idea.",
         coordinators: [
             { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
@@ -70,7 +70,7 @@ const events = [
         venue: "To be announced",
         image: "images/events/posterdesign.png",
         ruleBook: "../register.html",
-        register: "../register.html",
+        register: "register.html",
         description: "A creative event where participants visually express ideas and themes through artistic poster designs.",
         coordinators: [
             { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
@@ -85,7 +85,7 @@ const events = [
         venue: "To be announced",
         image: "images/events/bgmi.jpg",
         ruleBook: "../register.html",
-        register: "../register.html",
+        register: "register.html",
         description: "Survival battle royale, where only the best can claim victory.",
         coordinators: [
             { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
@@ -100,7 +100,7 @@ const events = [
         venue: "To be announced",
         image: "images/events/free-fire.webp",
         ruleBook: "../register.html",
-        register: "../register.html",
+        register: "register.html",
         description: "A test of reflexes and survival instincts in an action-packed battle royale.",
         coordinators: [
             { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
@@ -115,7 +115,7 @@ const events = [
         venue: "To be announced",
         image: "images/events/valorant.png",
         ruleBook: "../register.html",
-        register: "../register.html",
+        register: "register.html",
         description: "Tactical 5v5 shooter where precision and strategy decide the winner.",
         coordinators: [
             { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
