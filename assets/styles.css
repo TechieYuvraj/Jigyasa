@@ -27,6 +27,96 @@ pointer-particles {
     position: fixed;
     z-index: 101;
 }
+/* Preloader Styling */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    gap: 15px;
+    font-family: 'Pacifico', sans-serif;
+    z-index: 9999;
+    background-color: #651980;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Individual Letters */
+.letter {
+    font-size: 30px;
+    font-weight: bold;
+    color: #f39c12;
+    opacity: 0;
+    transform: translateX(100px); /* Start from right */
+    animation: waveEffect 2s ease-out forwards;
+}
+
+/* Animate each letter one after another */
+.letter:nth-child(1) { animation-delay: 0.1s; }
+.letter:nth-child(2) { animation-delay: 0.3s; }
+.letter:nth-child(3) { animation-delay: 0.5s; }
+.letter:nth-child(4) { animation-delay: 0.7s; }
+.letter:nth-child(5) { animation-delay: 0.9s; }
+.letter:nth-child(6) { animation-delay: 1.1s; }
+.letter:nth-child(7) { animation-delay: 1.3s; }
+/* Add more nth-child() if needed */
+
+/* Keyframe Animation */
+@keyframes waveEffect {
+    0% {
+        opacity: 0;
+        transform: translateX(100px) scale(0.5);
+    }
+    70% {
+        opacity: 1;
+        transform: translateX(-10px) scale(2.0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+/* Hide preloader smoothly */
+.fade-out {
+    animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* ✅ Responsive Fix */
+@media (max-width: 768px) {
+    #preloader {
+        flex-wrap: nowrap; /* Prevents elements from breaking into new lines */
+        gap: 3px;
+        min-width: -webkit-fill-available;
+        min-height: -webkit-fill-available;
+    }
+    .letter {
+        font-size: 24px;
+    }
+    @keyframes waveEffect {
+        0% {
+            opacity: 0;
+            transform: translateX(50px) scale(0.5);
+        }
+        70% {
+            opacity: 1;
+            transform: translateX(-5px) scale(1.2);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0) scale(1);
+        }
+    }
+}
 
 /* Header */
 header {

@@ -295,3 +295,25 @@ document.addEventListener("DOMContentLoaded", () => {
         displayCoordinators(eventId); // Display coordinators for that event
     }
 });
+
+// Hide preloader after the page loads
+document.addEventListener("DOMContentLoaded", function () {
+    let letters = document.querySelectorAll(".letter");
+
+    // Animate each letter with a delay
+    letters.forEach((letter, index) => {
+        setTimeout(() => {
+            letter.style.animationDelay = `${index * 0.2}s`;
+            letter.classList.add("animate");
+        }, index * 300);
+    });
+
+    // Hide preloader after animation completes
+    setTimeout(() => {
+        document.getElementById("preloader").classList.add("fade-out");
+        setTimeout(() => {
+            document.getElementById("preloader").style.display = "none";
+            document.getElementById("content").style.display = "block"; // Show main content
+        }, 1000);
+    }, 3900);
+});
