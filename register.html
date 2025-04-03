@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Registration</title>
-    <link rel="stylesheet" href="/assets/register.css?v=2.2">
+    <link rel="stylesheet" href="/assets/register.css?v=2.0">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
@@ -23,14 +23,14 @@
         <label>Select Event:</label>
         <select id="eventSelect" name="eventName" required>
             <option value="" disabled selected>--Choose Event--</option>
-            <option value="Euphonic Echoes">Euphonic Echoes (Singing)</option>
-            <option value="Majestic Threads">Majestic Threads (Fashion Show)</option>
-            <option value="Blaze the Stage">Blaze the Stage (Dancing)</option>
-            <option value="Theatrical Thunder">Theatrical Thunder (Drama)</option>
-            <option value="Rock the Stage">Rock the Stage (Band)</option>
-            <option value="Turntable Titans">Turntable Titans (DJ War)</option>
-            <option value="Beyond the Spotlight">Beyond the Spotlight (XFactor)</option>
-            <option value="Vocal Vertex">Vocal Vertex (Beat Boxing)</option>
+            <option value="Ideathon">Ideathon</option>
+            <option value="Debate">Debate</option>
+            <option value="Minute to Code">Minute to Code</option>
+            <option value="Minute to Pitch">Minute to Pitch (Papper)</option>
+            <option value="Valorant">Valorant</option>
+            <option value="BGMI">BGMI</option>
+            <option value="Free Fire">Free Fire</option>
+            <option value="Poster Making">Poster Making</option>
         </select>
 
         <label>Team Type:</label>
@@ -55,22 +55,36 @@
         <input type="email" id="leaderEmail" name="leaderEmail" required
             pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Enter a valid email address">
 
+        <label for="collegeName">College Name:</label>
+        <input type="text" id="collegeName" name="collegeName" required><br><br>
+
+        <label class="checkbox">
+            I am a student of GIT College
+            <input type="checkbox" id="gitStudent">
+        </label>
+
+        <div id="rollNoField" style="display: none;">
+            <label>Enter Your Roll No:</label>
+            <input type="text" id="rollNo" name="rollNo" />
+            <p style="color: rgb(192, 134, 134);">Kindly contact at 7398226246 if your Roll No is not in the list.</p>
+        </div>
+
         <div id="memberDetails" class="hidden"></div>
 
-        <label>Payment:</label>
+        <label id="gitpayment">Payment:</label>
         <a id="paymentLink" href="#" target="_blank">Pay Now</a>
 
         <button id="generateQR">Click to Scan</button>
         <div id="qrCodeContainer" style="margin-top: 10px;"></div>
-        
-        <label>UTR Number:</label>
+
+        <label id="gitUTR">UTR Number:</label>
         <input type="text" id="utrNumber" name="utrNumber" required>
 
         <button type="submit">Submit</button>
     </form>
 
-    <script src="/assets/register.js?v=2.2"></script>
-    <Script src="/assets/pointer.js?v=2.2"></Script>
+    <script src="/assets/register.js?v=2.0" type="module"></script>
+    <Script src="/assets/pointer.js?v=2.0"></Script>
 </body>
 
 </html>

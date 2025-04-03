@@ -88,7 +88,7 @@ header {
     transition: 0.3s;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1080px) {
     .navigation {
         display: none;
     }
@@ -154,7 +154,7 @@ header {
     }
 
     .bar {
-        width: 30px;
+        width: 50px;
         height: 4px;
         background-color: white;
         margin: 5px 0;
@@ -169,7 +169,7 @@ header {
 
     /* X animation */
     .menu-toggle.active .bar:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
+        transform: rotate(45deg) translate(10px, -3px);
     }
 
     .menu-toggle.active .bar:nth-child(2) {
@@ -177,7 +177,7 @@ header {
     }
 
     .menu-toggle.active .bar:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
+        transform: rotate(-45deg) translate(22px, -10px);
     }
 }
 
@@ -212,13 +212,11 @@ nav { /* Phone View */
 
 nav a { /* Desktop View */
     font-family: "Gugi", sans-serif;
-    letter-spacing: 3px;
     text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
     color: white;
-    gap: 20px;
     text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     text-decoration: none;
-    font-size: 25px;
+    font-size: 22px;
     padding: 10px;
     transition: 0.3s ease-in-out;
     position: relative;
@@ -251,7 +249,7 @@ nav a:hover {
    Section Styles
 ======================= */
 section {
-    padding: 60px 10%;
+    padding: 25px 10%;
     text-align: center;
     letter-spacing: 2px;
     text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
@@ -279,8 +277,8 @@ h2 {
 }
 
 .event-container img {
-    width: 90%;
-    height: 225px;
+    width: 55%;
+    height: 150px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
@@ -292,7 +290,7 @@ h2 {
     background: linear-gradient(50deg, #000000, #512368);
     padding-bottom: 20px;
     border-radius: 10px;
-    min-width: 290px;
+    min-width: 240px;
     text-align: center;
     transition: 0.3s;
     letter-spacing: 2px;
@@ -406,6 +404,26 @@ ul li {
         opacity: 0;
         transform: translate(20px, -40px) scale(1.5);
     }
+}
+
+.rulebook-btn {
+    background-color: #3d1047;
+    padding: 10px;
+    font-size: 25px;
+    border-radius: 10px;
+    margin: 0 20px;
+    margin-top: 30px;
+    text-align: center;
+    transition: 0.3s;
+    font-family: "Playfair Display", serif;
+    letter-spacing: 2px;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.rulebook-btn:hover {
+    box-shadow: 0 0 20px #dcdcdc;
+    transform: perspective(1000px) rotateY(15deg) translateY(-5px);
 }
 
 /* =======================

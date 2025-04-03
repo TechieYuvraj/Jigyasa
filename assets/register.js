@@ -1,27 +1,27 @@
-const upiBaseLink = "upi://pay?pa=kritikarohilla11294@okicici&tn=Click%20to%20pay&am=";
+const upiBaseLink = "upi://pay?pa=7398226246@ptyes&tn=Click%20to%20pay&am=";
 
 // Pricing table based on event and team size
 const eventPricing = {
-    "Euphonic Echoes": { solo: 199, duo: 399, group: 799 },
-    "Majestic Threads": { group: 799 },
-    "Blaze the Stage": { solo: 299, duo: 499, group: 899 },
-    "Theatrical Thunder": { group: 999 },
-    "Rock the Stage": { group: 999 },
-    "Turntable Titans": { solo: 299 },
-    "Beyond the Spotlight": { solo: 299, duo: 399, group: 699 },
-    "Vocal Vertex": { duo: 399 }
+    "Ideathon": { solo: 150, duo: 400, trio: 400, squad: 400 },
+    "Debate": { solo: 150 },
+    "Minute to Code": { solo: 200 },
+    "Minute to Pitch": { solo: 150, duo: 300 },
+    "Valorant": { group: 500 },
+    "BGMI": { squad: 400 },
+    "Free Fire": { squad: 400 },
+    "Poster Making": { solo: 150 }
 };
 
 // Allowed team sizes based on event type
 const eventTeamSizes = {
-    "Euphonic Echoes": { solo: [1, 1], duo: [2, 2], group: [4, 8] },
-    "Majestic Threads": { group: [5, 20] },
-    "Blaze the Stage": { solo: [1, 1], duo: [2, 2], group: [4, 15] },
-    "Theatrical Thunder": { group: [8, 12] },
-    "Rock the Stage": { group: [3, 5] },
-    "Turntable Titans": { solo: [1, 1] },
-    "Beyond the Spotlight": { solo: [1, 1], duo: [2, 2], group: [4, 8] },
-    "Vocal Vertex": { duo: [2, 2] }
+    "Ideathon": { solo: [1, 1], duo: [2, 2], trio: [3, 3], squad: [4, 4] },
+    "Debate": { solo: [1, 1] },
+    "Minute to Code": { solo: [1, 1] },
+    "Minute to Pitch": { solo: [1, 1], duo: [2, 2] },
+    "Valorant": { group: [5, 5] },
+    "BGMI": { squad: [4, 4] },
+    "Free Fire": { squad: [4, 4] },
+    "Poster Making": { solo: [1, 1] }
 };
 
 // Form elements
@@ -130,6 +130,8 @@ function updateMemberFields(teamSize) {
                 <input type="email" name="memberEmail${i}" class="memberEmail" required><br><br>
                 <label>Member ${i} Phone No.:</label>
                 <input type="tel" name="memberPhone${i}" class="memberPhone" required pattern="[0-9]{10}" title="Enter 10-digit phone number"><br><br>
+                <label>Member ${i} Roll No.:</label>
+                <input type="text" name="memberRollNo${i}" class="memberRollNo" required><br><br>
             `;
             memberDetails.appendChild(div);
         }
@@ -149,19 +151,13 @@ function updatePaymentLink(event = "", type = "", size = 1) {
     paymentLink.href = `${upiBaseLink}${amount}&cu=INR`;
 }
 
-// Handle form submission
-document.getElementById("eventForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-    fetch("https://script.google.com/macros/s/AKfycbx6M2C1g3_0azGzPsFt2dYpus7OKkuIkhC4zIZF5-6sEieiV4saCUWzFMe3PMp8rBw/exec", {
-        method: "POST",
-        body: new FormData(this)
-    })
-        .then(response => response.text())
-        .then(data => {
-            alert("Registration Successful!");
-            window.location.href = "register.html"; // Redirect to home
-        })
-        .catch(error => console.error("Error:", error));
+document.getElementById("leaderMobile").addEventListener("input", function () {
+    this.value = this.value.replace(/[^0-9]/g, ""); // Allow only numbers
+    if (this.value.length > 10) this.value = this.value.slice(0, 10); // Limit to 10 digits
+});
+
+document.getElementById("leaderEmail").addEventListener("input", function () {
+    this.value = this.value.replace(/\s/g, ""); // Remove spaces
 });
 
 document.getElementById("generateQR").addEventListener("click", function () {
@@ -183,4 +179,84 @@ document.getElementById("generateQR").addEventListener("click", function () {
         colorLight: "#fff", // White background
         correctLevel: QRCode.CorrectLevel.H // High error correction
     });
+});
+
+import { validRollNumbers } from "./rollNumbers.js"; // Adjust the path if needed
+
+document.addEventListener("DOMContentLoaded", function () {
+    const gitCheckbox = document.getElementById("gitStudent");
+    const rollNoField = document.getElementById("rollNoField");
+    const utrField = document.getElementById("utrNumber");
+    const payButton = document.getElementById("paymentLink");
+    const scanToPayButton = document.getElementById("generateQR");
+    const qrCodeContainer = document.getElementById("qrCodeContainer");
+    const gitpayment = document.getElementById("gitpayment");
+    const gitUTR = document.getElementById("gitUTR");
+
+    // Toggle visibility based on GIT checkbox
+    gitCheckbox.addEventListener("change", function () {
+        if (this.checked) {
+            rollNoField.style.display = "block"; // Show Roll No field
+            utrField.style.display = "none"; // Hide UTR field
+            payButton.style.display = "none"; // Hide Pay Now button
+            scanToPayButton.style.display = "none"; // Hide Scan to Pay button
+            qrCodeContainer.style.display = "none"; // Hide QR Code container
+            gitpayment.style.display = "none"; // Hide GIT label
+            gitUTR.style.display = "none"; // Hide UTR label
+            utrField.removeAttribute("required");
+        } else {
+            rollNoField.style.display = "none";
+            utrField.style.display = "block";
+            payButton.style.display = "inline-block";
+            scanToPayButton.style.display = "inline-block";
+            qrCodeContainer.style.display = "block";
+            gitpayment.style.display = "block"; // Show GIT label
+            gitUTR.style.display = "block"; // Show UTR label
+            utrField.setAttribute("required", "true");
+        }
+    });
+});
+
+document.querySelector("form").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent default form submission
+
+    const gitCheckbox = document.getElementById("gitStudent");
+    const rollNoInput = document.getElementById("rollNo").value.trim();
+
+    // Validate Roll No if GIT checkbox is checked
+    if (gitCheckbox.checked) {
+        if (!validRollNumbers.includes(rollNoInput)) {
+            alert("Invalid Roll Number! Please enter a valid GIT Roll Number.");
+            return; // Stop submission if Roll No is invalid
+        }
+    }
+
+    // Validate Member Roll Numbers
+    let invalidRollNumbers = [];
+    document.querySelectorAll(".memberRollNo").forEach(input => {
+        let rollNo = input.value.trim();
+        if (rollNo && !validRollNumbers.includes(rollNo)) {
+            invalidRollNumbers.push(rollNo);
+            input.style.border = "2px solid red"; // Highlight invalid field
+        } else {
+            input.style.border = ""; // Reset border if valid
+        }
+    });
+
+    if (invalidRollNumbers.length > 0) {
+        alert("Invalid Member Roll Numbers: " + invalidRollNumbers.join(", "));
+        return; // Stop submission if any roll number is invalid
+    }
+
+    // Proceed with form submission to the server
+    fetch("https://script.google.com/macros/s/AKfycbwFR2OoNLEfahXbdY4ND_Q_erx4Xsshd7bxr-xCd-7z9E57nQGHEuNC68GrFScbzbjz/exec", {
+        method: "POST",
+        body: new FormData(this)
+    })
+        .then(response => response.text())
+        .then(data => {
+            alert("Registration Successful!");
+            window.location.href = "index.html"; // Redirect to home
+        })
+        .catch(error => console.error("Error:", error));
 });

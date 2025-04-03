@@ -10,6 +10,7 @@ const events = [
         venue: "To be announced",
         image: "images/events/ideathon.png",
         ruleBook: "../register.html",
+        register: "../register.html",
         description: "A platform for innovative thinkers to present groundbreaking ideas that solve real-world problems. Participants pitch their concepts to a panel of judges.",
         coordinators: [
             { name: "Harshvardhan Singh", contact: "+91 81122 80766" },
@@ -24,6 +25,7 @@ const events = [
         venue: "To be announced",
         image: "images/events/debate.png",
         ruleBook: "../register.html",
+        register: "../register.html",
         description: "A battle of intellect and arguments where participants defend or oppose a given topic with logic, evidence, and persuasion.",
         coordinators: [
             { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
@@ -38,6 +40,7 @@ const events = [
         venue: "To be announced",
         image: "images/events/MinuteToCode.png",
         ruleBook: "../register.html",
+        register: "../register.html",
         description: "A coding challenge that tests speed, logic, and problem-solving skills within a limited time frame.",
         coordinators: [
             { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
@@ -52,6 +55,7 @@ const events = [
         venue: "To be announced",
         image: "images/events/minute-to-pitch.png",
         ruleBook: "../register.html",
+        register: "../register.html",
         description: "A fast-paced competition where participants have just one minute to deliver a compelling pitch on a given topic or idea.",
         coordinators: [
             { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
@@ -66,6 +70,7 @@ const events = [
         venue: "To be announced",
         image: "images/events/posterdesign.png",
         ruleBook: "../register.html",
+        register: "../register.html",
         description: "A creative event where participants visually express ideas and themes through artistic poster designs.",
         coordinators: [
             { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
@@ -80,6 +85,7 @@ const events = [
         venue: "To be announced",
         image: "images/events/bgmi.jpg",
         ruleBook: "../register.html",
+        register: "../register.html",
         description: "Survival battle royale, where only the best can claim victory.",
         coordinators: [
             { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
@@ -94,6 +100,7 @@ const events = [
         venue: "To be announced",
         image: "images/events/free-fire.webp",
         ruleBook: "../register.html",
+        register: "../register.html",
         description: "A test of reflexes and survival instincts in an action-packed battle royale.",
         coordinators: [
             { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
@@ -108,26 +115,28 @@ const events = [
         venue: "To be announced",
         image: "images/events/valorant.png",
         ruleBook: "../register.html",
+        register: "../register.html",
         description: "Tactical 5v5 shooter where precision and strategy decide the winner.",
         coordinators: [
             { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
             { name: "Bob Williams", contact: "+91 8877665544" }
         ]
-    },
-    {
-        id: "Domain Tech Fair",
-        title: "Domain Tech Fair",
-        date: "April 17, 2025",
-        time: "Waiting for time",
-        venue: "To be announced",
-        image: "images/events/domain.svg",
-        ruleBook: "../register.html",
-        description: "A showcase of emerging technologies, projects, and innovations in various technical domains, offering a platform for networking and learning.",
-        coordinators: [
-            { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
-            { name: "Bob Williams", contact: "+91 8877665544" }
-        ]
     }
+    // {
+    //     id: "Domain Tech Fair",
+    //     title: "Domain Tech Fair",
+    //     date: "April 17, 2025",
+    //     time: "Waiting for time",
+    //     venue: "To be announced",
+    //     image: "images/events/domain.svg",
+    //     ruleBook: "../register.html",
+    //     register: "../register.html",
+    //     description: "A showcase of emerging technologies, projects, and innovations in various technical domains, offering a platform for networking and learning.",
+    //     coordinators: [
+    //         { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
+    //         { name: "Bob Williams", contact: "+91 8877665544" }
+    //     ]
+    // }
 ];
 
 // =============================
@@ -190,6 +199,7 @@ function loadEvent(eventId) {
     document.getElementById("event-venue").innerText = event.venue;
     document.getElementById("event-image").src = event.image;
     document.getElementById("rule-book").href = event.ruleBook;
+    document.getElementById("register").href = event.register; 
     document.getElementById("event-description").innerText = event.description;
 
     // Update Coordinator Section
@@ -230,4 +240,58 @@ document.addEventListener("DOMContentLoaded", function() {
         menu.classList.toggle("active");
         mobileMenu.classList.toggle("active");
     });
+});
+
+// Function to get the event ID from the URL (?event= format)
+function getEventIdFromURL() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get("event"); // Extracts the event ID correctly
+}
+
+// Function to display coordinators for the selected event
+function displayCoordinators(eventId) {
+    const coordinatorsList = document.getElementById("coordinators-list");
+    coordinatorsList.innerHTML = ""; // Clear previous coordinators
+
+    // Find the event matching the eventId
+    const selectedEvent = events.find(event => event.id === eventId);
+    if (!selectedEvent) {
+        coordinatorsList.innerHTML = "<p>No coordinators found for this event.</p>";
+        return;
+    }
+
+    // Loop through the coordinators of the selected event and add them dynamically
+    selectedEvent.coordinators.forEach((coordinator) => {
+        const coordinatorCard = document.createElement("div");
+        coordinatorCard.classList.add("team-card");
+
+        // Name
+        const nameElement = document.createElement("h3");
+        nameElement.textContent = coordinator.name;
+
+        // Contact Number
+        const contactElement = document.createElement("p");
+        contactElement.textContent = `📞 ${coordinator.contact}`;
+
+        // WhatsApp Button
+        const whatsappLink = document.createElement("a");
+        whatsappLink.href = `https://wa.me/${coordinator.contact.replace(/\s+/g, '')}`;
+        whatsappLink.target = "_blank";
+        whatsappLink.classList.add("whatsapp-button");
+        whatsappLink.innerHTML = "Chat on WhatsApp 💬";
+
+        // Append elements
+        coordinatorCard.appendChild(nameElement);
+        coordinatorCard.appendChild(contactElement);
+        coordinatorCard.appendChild(whatsappLink);
+        coordinatorsList.appendChild(coordinatorCard);
+    });
+}
+
+// Execute when page loads
+document.addEventListener("DOMContentLoaded", () => {
+    const eventId = getEventIdFromURL(); // Get event ID from URL
+    if (eventId) {
+        displayCoordinators(eventId); // Display coordinators for that event
+    }
 });
