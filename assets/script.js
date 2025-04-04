@@ -19,7 +19,7 @@ const events = [
     },
     {
         id: "Word War",
-        title: "Wrod War",
+        title: "Word War",
         date: "April 17, 2025",
         time: "Waiting for time",
         venue: "To be announced",
