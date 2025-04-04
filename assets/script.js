@@ -5,7 +5,7 @@ const events = [
     {
         id: "Ideathon",
         title: "Ideathon",
-        date: "April 16, 2025",
+        date: "April 17, 2025",
         time: "Waiting for time",
         venue: "To be announced",
         image: "images/events/ideathon.png",
@@ -20,7 +20,7 @@ const events = [
     {
         id: "Word War",
         title: "Wrod War",
-        date: "April 16, 2025",
+        date: "April 17, 2025",
         time: "Waiting for time",
         venue: "To be announced",
         image: "images/events/debate.png",
@@ -35,7 +35,7 @@ const events = [
     {
         id: "Minutes to Pitch",
         title: "Minutes to Pitch",
-        date: "April 16, 2025",
+        date: "April 17, 2025",
         time: "Waiting for time",
         venue: "To be announced",
         image: "images/events/minute-to-pitch.png",
@@ -48,9 +48,9 @@ const events = [
         ]
     },
     {
-        id: "Minutes to Pitch",
-        title: "Minutes to Pitch",
-        date: "April 16, 2025",
+        id: "Minutes to Code",
+        title: "Minutes to Code",
+        date: "April 17, 2025",
         time: "Waiting for time",
         venue: "To be announced",
         image: "images/events/MinuteToCode.png",
@@ -65,7 +65,7 @@ const events = [
     {
         id: "Poster Making",
         title: "Poster Making",
-        date: "April 16, 2025",
+        date: "April 17, 2025",
         time: "Waiting for time",
         venue: "To be announced",
         image: "images/events/posterdesign.png",
@@ -80,7 +80,7 @@ const events = [
     {
         id: "Bridge Mania",
         title: "Bridge Mania",
-        date: "April 16, 2025",
+        date: "April 17, 2025",
         time: "Waiting for time",
         venue: "To be announced",
         image: "images/events/bridge-mania.png",
@@ -95,7 +95,7 @@ const events = [
     {
         id: "BGMI",
         title: "BGMI",
-        date: "April 16, 2025",
+        date: "April 17, 2025",
         time: "Waiting for time",
         venue: "To be announced",
         image: "images/events/bgmi.jpg",
@@ -110,7 +110,7 @@ const events = [
     {
         id: "Free Fire",
         title: "Free Fire",
-        date: "April 16, 2025",
+        date: "April 17, 2025",
         time: "Waiting for time",
         venue: "To be announced",
         image: "images/events/free-fire.webp",
@@ -125,7 +125,7 @@ const events = [
     {
         id: "Valorant",
         title: "Valorant",
-        date: "April 16, 2025",
+        date: "April 17, 2025",
         time: "Waiting for time",
         venue: "To be announced",
         image: "images/events/valorant.png",
