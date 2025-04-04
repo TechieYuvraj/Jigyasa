@@ -1,25 +1,25 @@
-const upiBaseLink = "upi://pay?pa=7398226246@ptyes&tn=Click%20to%20pay&am=";
+const upiBaseLink = "upi://pay?pa=8290162932@ybl&tn=Click%20to%20pay&am=";
 
 // Pricing table based on event and team size
 const eventPricing = {
-    "Ideathon": { solo: 150, duo: 400, trio: 400, squad: 400 },
-    "Word War": { solo: 150 },
-    "Bridge Mania": { solo: 200 },
-    "Minutes to Pitch": { solo: 150, duo: 300 },
-    "Minutes to Code": { solo: 150 },
+    "Ideathon": { solo: 199, duo: 399, trio: 399, squad: 399 },
+    "Word War": { solo: 199 },
+    "Bridge Mania": { duo: 199, trio: 299, squad: 399 },
+    "Minutes to Pitch": { solo: 199, duo: 299 },
+    "Minutes to Code": { solo: 199 },
     "Valorant": { group: 500 },
     "BGMI": { squad: 400 },
     "Free Fire": { squad: 400 },
-    "Poster Making": { solo: 150 }
+    "Poster Making": { solo: 199 }
 };
 
 // Allowed team sizes based on event type
 const eventTeamSizes = {
     "Ideathon": { solo: [1, 1], duo: [2, 2], trio: [3, 3], squad: [4, 4] },
     "Word War": { solo: [1, 1] },
-    "Bridge Mania": { solo: [1, 1] },
-    "Minute to Pitch": { solo: [1, 1], duo: [2, 2] },
-    "Minute to Code": { solo: [1, 1] },
+    "Bridge Mania": { duo: [2, 2], trio: [3, 3], squad: [4, 4] },
+    "Minutes to Pitch": { solo: [1, 1], duo: [2, 2] },
+    "Minutes to Code": { solo: [1, 1] },
     "Valorant": { group: [5, 5] },
     "BGMI": { squad: [4, 4] },
     "Free Fire": { squad: [4, 4] },

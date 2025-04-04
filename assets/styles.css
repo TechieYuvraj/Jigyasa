@@ -1,14 +1,13 @@
 /* Global Styles */
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Iceberg&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap'); /* Using for headings */
-@import url('https://fonts.googleapis.com/css2?family=Iceberg&display=swap'); /* Using for normal text */
-
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');  /* Using for normal text */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Iceberg", sans-serif;
+    font-family: "Oxanium", sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -398,7 +397,6 @@ h2 {
 .card h3 {
     margin: 15px 0;
     font-size: 1.4rem;
-    font-family: "Iceberg", sans-serif;
     letter-spacing: 2px;
     text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
     color: #ffffff;
@@ -411,13 +409,11 @@ ul {
 ul li {
     font-size: 20px;
     padding: 5px 0;
-    font-family: "Iceberg", sans-serif;
     
 }
 
 .card p {
     font-size: 1rem;
-    font-family: "Iceberg", sans-serif;
     letter-spacing: 2px;
     text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
     color: #ffffff;
@@ -498,7 +494,7 @@ ul li {
 }
 
 .rulebook-btn {
-    background-color: #3d1047;
+    background-color: #891fa0;
     padding: 10px;
     font-size: 25px;
     border-radius: 10px;
@@ -635,7 +631,6 @@ ul li {
 }
 .team-card p {
     font-size: 1rem;
-    font-family: "Iceberg", sans-serif;
     opacity: 0.8;
 }
 

@@ -13,8 +13,8 @@ const events = [
         register: "register.html",
         description: "A platform for innovative thinkers to present groundbreaking ideas that solve real-world problems. Participants pitch their concepts to a panel of judges.",
         coordinators: [
-            { name: "Harshvardhan Singh", contact: "+91 81122 80766" },
-            { name: "yuvraj Pratap Singh", contact: "+91 739826246" }
+            { name: "Gavesh Jain", contact: "+91 7742908700" },
+            { name: "Anurag Kumar", contact: "+91 8824898063" }
         ]
     },
     {
@@ -28,8 +28,9 @@ const events = [
         register: "register.html",
         description: "A battle of intellect and arguments where participants defend or oppose a given topic with logic, evidence, and persuasion.",
         coordinators: [
-            { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
-            { name: "Bob Williams", contact: "+91 8877665544" }
+            { name: "Satyam Tiwari", contact: "+91 6307074481" },
+            { name: "Mudit Paliwal", contact: "+91 7877065009" },
+            { name: "Mayank Ghiya", contact: "+91 7980996825"}
         ]
     },
     {
@@ -43,8 +44,9 @@ const events = [
         register: "register.html",
         description: "A fast-paced competition where participants have just one minute to deliver a compelling pitch on a given topic or idea.",
         coordinators: [
-            { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
-            { name: "Bob Williams", contact: "+91 8877665544" }
+            { name: "Tej Prakash Singh", contact: "+91 7230956167" },
+            { name: "Vansh Patel", contact: "+91 9737879397" },
+            { name: "Tejendar Kaur", contact: "+91 7878511071" }
         ]
     },
     {
@@ -58,8 +60,9 @@ const events = [
         register: "register.html",
         description: "A coding challenge that tests speed, logic, and problem-solving skills within a limited time frame.",
         coordinators: [
-            { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
-            { name: "Bob Williams", contact: "+91 8877665544" }
+            { name: "Gavesh Jain", contact: "+91 7742908700" },
+            { name: "Anirudh sharma", contact: "+91 6378865401" },
+            { name: "Raj Gehlot", contact: "+91 9571240742" },
         ]
     },
     {
@@ -73,8 +76,9 @@ const events = [
         register: "register.html",
         description: "A creative event where participants visually express ideas and themes through artistic poster designs.",
         coordinators: [
-            { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
-            { name: "Bob Williams", contact: "+91 8877665544" }
+            { name: "Vedika Sharda", contact: "+91 7339980017" },
+            { name: "Aditi Shrivastav", contact: "+91 6261174228" },
+            { name: "Aditya Agarwal", contact: "+91 9001537739" },
         ]
     },
     {
@@ -88,8 +92,8 @@ const events = [
         register: "register.html",
         description: "Design and construct a sturdy bridge using limited resources. Test your creativity, engineering skills, and structural strength to see if your bridge can withstand the ultimate challenge!",
         coordinators: [
-            { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
-            { name: "Bob Williams", contact: "+91 8877665544" }
+            { name: "Saksham Garg", contact: "+91 6378322020" },
+            { name: "Sakshi Saxena", contact: "+91 6378168972" }
         ]
     },
     {
@@ -103,8 +107,8 @@ const events = [
         register: "register.html",
         description: "Survival battle royale, where only the best can claim victory.",
         coordinators: [
-            { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
-            { name: "Bob Williams", contact: "+91 8877665544" }
+            { name: "Yuvraj Pratap Singh", contact: "+91 739826246" },
+            { name: "Aamir Khan", contact: "+91 8299328515" }
         ]
     },
     {
@@ -118,8 +122,8 @@ const events = [
         register: "register.html",
         description: "A test of reflexes and survival instincts in an action-packed battle royale.",
         coordinators: [
-            { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
-            { name: "Bob Williams", contact: "+91 8877665544" }
+            { name: "Bhavesh Singhal", contact: "+91 9509173908" },
+            { name: "Raj Birla ", contact: "+91 9829903411" }
         ]
     },
     {
@@ -133,25 +137,10 @@ const events = [
         register: "register.html",
         description: "Tactical 5v5 shooter where precision and strategy decide the winner.",
         coordinators: [
-            { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
-            { name: "Bob Williams", contact: "+91 8877665544" }
+            { name: "Gavesh Jain", contact: "+91 7742908700" },
+            { name: "Satyam Tiwari", contact: "+91 6307074481" }
         ]
     }
-    // {
-    //     id: "Domain Tech Fair",
-    //     title: "Domain Tech Fair",
-    //     date: "April 17, 2025",
-    //     time: "Waiting for time",
-    //     venue: "To be announced",
-    //     image: "images/events/domain.svg",
-    //     ruleBook: "../register.html",
-    //     register: "../register.html",
-    //     description: "A showcase of emerging technologies, projects, and innovations in various technical domains, offering a platform for networking and learning.",
-    //     coordinators: [
-    //         { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
-    //         { name: "Bob Williams", contact: "+91 8877665544" }
-    //     ]
-    // }
 ];
 
 // =============================
