@@ -5,7 +5,8 @@ const eventPricing = {
     "Ideathon": { solo: 150, duo: 400, trio: 400, squad: 400 },
     "Word War": { solo: 150 },
     "Bridge Mania": { solo: 200 },
-    "Minute to Pitch": { solo: 150, duo: 300 },
+    "Minutes to Pitch": { solo: 150, duo: 300 },
+    "Minutes to Code": { solo: 150 },
     "Valorant": { group: 500 },
     "BGMI": { squad: 400 },
     "Free Fire": { squad: 400 },
@@ -18,6 +19,7 @@ const eventTeamSizes = {
     "Word War": { solo: [1, 1] },
     "Bridge Mania": { solo: [1, 1] },
     "Minute to Pitch": { solo: [1, 1], duo: [2, 2] },
+    "Minute to Code": { solo: [1, 1] },
     "Valorant": { group: [5, 5] },
     "BGMI": { squad: [4, 4] },
     "Free Fire": { squad: [4, 4] },
@@ -83,6 +85,30 @@ teamTypeSelect.addEventListener("change", function () {
     } else if (selectedType === "duo") {
         teamSizeSelect.innerHTML = "";
         let [min, max] = eventTeamSizes[selectedEvent].duo;
+        for (let i = min; i <= max; i++) {
+            let option = document.createElement("option");
+            option.value = i;
+            option.textContent = i;
+            teamSizeSelect.appendChild(option);
+        }
+        teamSizeSelect.disabled = false; // Enable selection for group
+        teamSizeSelect.dispatchEvent(new Event("change")); // Trigger event
+
+    } else if (selectedType === "trio") {
+        teamSizeSelect.innerHTML = "";
+        let [min, max] = eventTeamSizes[selectedEvent].trio;
+        for (let i = min; i <= max; i++) {
+            let option = document.createElement("option");
+            option.value = i;
+            option.textContent = i;
+            teamSizeSelect.appendChild(option);
+        }
+        teamSizeSelect.disabled = false; // Enable selection for group
+        teamSizeSelect.dispatchEvent(new Event("change")); // Trigger event
+
+    } else if (selectedType === "squad") {
+        teamSizeSelect.innerHTML = "";
+        let [min, max] = eventTeamSizes[selectedEvent].squad;
         for (let i = min; i <= max; i++) {
             let option = document.createElement("option");
             option.value = i;

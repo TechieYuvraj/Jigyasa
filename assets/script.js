@@ -33,8 +33,8 @@ const events = [
         ]
     },
     {
-        id: "Minute to Pitch",
-        title: "Minute to Pitch",
+        id: "Minutes to Pitch",
+        title: "Minutes to Pitch",
         date: "April 16, 2025",
         time: "Waiting for time",
         venue: "To be announced",
@@ -42,6 +42,21 @@ const events = [
         ruleBook: "../register.html",
         register: "register.html",
         description: "A fast-paced competition where participants have just one minute to deliver a compelling pitch on a given topic or idea.",
+        coordinators: [
+            { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
+            { name: "Bob Williams", contact: "+91 8877665544" }
+        ]
+    },
+    {
+        id: "Minutes to Pitch",
+        title: "Minutes to Pitch",
+        date: "April 16, 2025",
+        time: "Waiting for time",
+        venue: "To be announced",
+        image: "images/events/MinuteToCode.png",
+        ruleBook: "../register.html",
+        register: "register.html",
+        description: "A coding challenge that tests speed, logic, and problem-solving skills within a limited time frame.",
         coordinators: [
             { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
             { name: "Bob Williams", contact: "+91 8877665544" }
