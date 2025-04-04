@@ -20,6 +20,7 @@ body {
     background-position: center; /* Center the image */
     color: #ffffff;
     line-height: 1.6;
+    justify-content: center;
     overflow-x: hidden;
 }
 
@@ -323,10 +324,10 @@ nav a:hover {
     margin: 0 -30px;
 }
 .logo1{
-    width:  350px;
+    width:  250px;
     height: 60px;
     margin: 0 10px;
-    min-width: 349px;
+    min-width: 250px;
 }
 
 .navigation-logo {

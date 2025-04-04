@@ -3,8 +3,8 @@ const upiBaseLink = "upi://pay?pa=7398226246@ptyes&tn=Click%20to%20pay&am=";
 // Pricing table based on event and team size
 const eventPricing = {
     "Ideathon": { solo: 150, duo: 400, trio: 400, squad: 400 },
-    "Debate": { solo: 150 },
-    "Minute to Code": { solo: 200 },
+    "Word War": { solo: 150 },
+    "Bridge Mania": { solo: 200 },
     "Minute to Pitch": { solo: 150, duo: 300 },
     "Valorant": { group: 500 },
     "BGMI": { squad: 400 },
@@ -15,8 +15,8 @@ const eventPricing = {
 // Allowed team sizes based on event type
 const eventTeamSizes = {
     "Ideathon": { solo: [1, 1], duo: [2, 2], trio: [3, 3], squad: [4, 4] },
-    "Debate": { solo: [1, 1] },
-    "Minute to Code": { solo: [1, 1] },
+    "Word War": { solo: [1, 1] },
+    "Bridge Mania": { solo: [1, 1] },
     "Minute to Pitch": { solo: [1, 1], duo: [2, 2] },
     "Valorant": { group: [5, 5] },
     "BGMI": { squad: [4, 4] },

@@ -18,8 +18,8 @@ const events = [
         ]
     },
     {
-        id: "Debate",
-        title: "Debate",
+        id: "Word War",
+        title: "Wrod War",
         date: "April 16, 2025",
         time: "Waiting for time",
         venue: "To be announced",
@@ -27,21 +27,6 @@ const events = [
         ruleBook: "../register.html",
         register: "register.html",
         description: "A battle of intellect and arguments where participants defend or oppose a given topic with logic, evidence, and persuasion.",
-        coordinators: [
-            { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
-            { name: "Bob Williams", contact: "+91 8877665544" }
-        ]
-    },
-    {
-        id: "Minute to Code",
-        title: "Minute to Code",
-        date: "April 16, 2025",
-        time: "Waiting for time",
-        venue: "To be announced",
-        image: "images/events/MinuteToCode.png",
-        ruleBook: "../register.html",
-        register: "register.html",
-        description: "A coding challenge that tests speed, logic, and problem-solving skills within a limited time frame.",
         coordinators: [
             { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
             { name: "Bob Williams", contact: "+91 8877665544" }
@@ -72,6 +57,21 @@ const events = [
         ruleBook: "../register.html",
         register: "register.html",
         description: "A creative event where participants visually express ideas and themes through artistic poster designs.",
+        coordinators: [
+            { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
+            { name: "Bob Williams", contact: "+91 8877665544" }
+        ]
+    },
+    {
+        id: "Bridge Mania",
+        title: "Bridge Mania",
+        date: "April 16, 2025",
+        time: "Waiting for time",
+        venue: "To be announced",
+        image: "images/events/bridge-mania.png",
+        ruleBook: "../register.html",
+        register: "register.html",
+        description: "Design and construct a sturdy bridge using limited resources. Test your creativity, engineering skills, and structural strength to see if your bridge can withstand the ultimate challenge!",
         coordinators: [
             { name: "yuvraj Pratap Singh", contact: "+91 739826246" },
             { name: "Bob Williams", contact: "+91 8877665544" }
