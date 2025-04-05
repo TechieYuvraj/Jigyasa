@@ -67,7 +67,7 @@ const events = [
     },
     {
         id: "Poster Making",
-        title: "Poster Making",
+        title: "Creativita",
         date: "April 17, 2025",
         time: "Waiting for time",
         venue: "To be announced",
