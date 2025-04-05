@@ -9,12 +9,13 @@ const events = [
         time: "Waiting for time",
         venue: "To be announced",
         image: "images/events/ideathon.png",
-        ruleBook: "../register.html",
+        ruleBook: "https://drive.google.com/file/d/1rumUCNt46tSeWFxb79QoGvpJkV9Sgnp_/view?usp=sharing",
         register: "register.html",
         description: "A platform for innovative thinkers to present groundbreaking ideas that solve real-world problems. Participants pitch their concepts to a panel of judges.",
         coordinators: [
             { name: "Gavesh Jain", contact: "+91 7742908700" },
-            { name: "Anurag Kumar", contact: "+91 8824898063" }
+            { name: "Anurag Kumar", contact: "+91 8824898063" },
+            { name: "Aditi Agrawal", contact: "+91 7665225720" }
         ]
     },
     {
@@ -24,7 +25,7 @@ const events = [
         time: "Waiting for time",
         venue: "To be announced",
         image: "images/events/debate.png",
-        ruleBook: "../register.html",
+        ruleBook: "https://drive.google.com/file/d/1AT3YW-VE7pNyic5USFi1-5RMEKwlyYrd/view?usp=sharing",
         register: "register.html",
         description: "A battle of intellect and arguments where participants defend or oppose a given topic with logic, evidence, and persuasion.",
         coordinators: [
@@ -40,7 +41,7 @@ const events = [
         time: "Waiting for time",
         venue: "To be announced",
         image: "images/events/minute-to-pitch.png",
-        ruleBook: "../register.html",
+        ruleBook: "https://drive.google.com/file/d/1XeY53-HXmaOOMOT_yWcCUm8YfD5nKQYp/view?usp=sharing",
         register: "register.html",
         description: "A fast-paced competition where participants have just one minute to deliver a compelling pitch on a given topic or idea.",
         coordinators: [
@@ -56,7 +57,7 @@ const events = [
         time: "Waiting for time",
         venue: "To be announced",
         image: "images/events/MinuteToCode.png",
-        ruleBook: "../register.html",
+        ruleBook: "https://drive.google.com/file/d/1I5aHBLbFBhmqKOw3YDsge5anfr6LumMs/view?usp=sharing",
         register: "register.html",
         description: "A coding challenge that tests speed, logic, and problem-solving skills within a limited time frame.",
         coordinators: [
@@ -72,13 +73,13 @@ const events = [
         time: "Waiting for time",
         venue: "To be announced",
         image: "images/events/posterdesign.png",
-        ruleBook: "../register.html",
+        ruleBook: "https://drive.google.com/file/d/1wMK3NYEWAErfKAy-sPUgbREtyg4KwmFK/view?usp=sharing",
         register: "register.html",
         description: "A creative event where participants visually express ideas and themes through artistic poster designs.",
         coordinators: [
             { name: "Vedika Sharda", contact: "+91 7339980017" },
             { name: "Aditi Shrivastav", contact: "+91 6261174228" },
-            { name: "Aditya Agarwal", contact: "+91 9001537739" },
+            { name: "Ayushi Maheshwari", contact: "+91 9828192980" },
         ]
     },
     {
@@ -88,7 +89,7 @@ const events = [
         time: "Waiting for time",
         venue: "To be announced",
         image: "images/events/bridge-mania.png",
-        ruleBook: "../register.html",
+        ruleBook: "https://drive.google.com/file/d/1uDIVS-TN5zHrrAnkIOr7K76btL6XL0ha/view?usp=sharing",
         register: "register.html",
         description: "Design and construct a sturdy bridge using limited resources. Test your creativity, engineering skills, and structural strength to see if your bridge can withstand the ultimate challenge!",
         coordinators: [
@@ -103,12 +104,13 @@ const events = [
         time: "Waiting for time",
         venue: "To be announced",
         image: "images/events/bgmi.jpg",
-        ruleBook: "../register.html",
+        ruleBook: "https://drive.google.com/file/d/1JJZs4JYamx-In6no_JFkJsRiJp92MQSa/view?usp=sharing",
         register: "register.html",
         description: "Survival battle royale, where only the best can claim victory.",
         coordinators: [
             { name: "Yuvraj Pratap Singh", contact: "+91 739826246" },
-            { name: "Aamir Khan", contact: "+91 8299328515" }
+            { name: "Aamir Khan", contact: "+91 8299328515" },
+            { name: "Rohan Verma", contact: "+91 7665001073" }
         ]
     },
     {
@@ -118,12 +120,13 @@ const events = [
         time: "Waiting for time",
         venue: "To be announced",
         image: "images/events/free-fire.webp",
-        ruleBook: "../register.html",
+        ruleBook: "https://drive.google.com/file/d/1CrjssFWotKPZmrMDPTpYXifXiI0lqoat/view?usp=sharing",
         register: "register.html",
         description: "A test of reflexes and survival instincts in an action-packed battle royale.",
         coordinators: [
             { name: "Bhavesh Singhal", contact: "+91 9509173908" },
-            { name: "Raj Birla ", contact: "+91 9829903411" }
+            { name: "Raj Birla ", contact: "+91 9829903411" },
+            { name: "Dhruv", contact: "+91 8800166817" }
         ]
     },
     {
@@ -133,12 +136,13 @@ const events = [
         time: "Waiting for time",
         venue: "To be announced",
         image: "images/events/valorant.png",
-        ruleBook: "../register.html",
+        ruleBook: "https://drive.google.com/file/d/133orkRjF2QQmcGyVKJm-iqkopXX0m7we/view?usp=sharing",
         register: "register.html",
         description: "Tactical 5v5 shooter where precision and strategy decide the winner.",
         coordinators: [
             { name: "Gavesh Jain", contact: "+91 7742908700" },
-            { name: "Satyam Tiwari", contact: "+91 6307074481" }
+            { name: "Satyam Tiwari", contact: "+91 6307074481" },
+            { name: "Nikhil Lakhara", contact: "+91 7415940360" }
         ]
     }
 ];
