@@ -207,7 +207,7 @@ document.getElementById("generateQR").addEventListener("click", function () {
     });
 });
 
-import { validRollNumbers } from "./rollNumbers.js"; // Adjust the path if needed
+import { validRollNumbers } from "./rollNumbers.js?v=1.1"; // Adjust the path if needed
 
 document.addEventListener("DOMContentLoaded", function () {
     const gitCheckbox = document.getElementById("gitStudent");
