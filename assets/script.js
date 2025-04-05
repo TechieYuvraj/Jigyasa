@@ -329,3 +329,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 1000);
     }, 3900);
 });
+
+const music = document.getElementById("bgm");
+music.volume = 0.4; // Set volume to 30%    
