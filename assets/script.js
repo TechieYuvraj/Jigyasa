@@ -125,8 +125,7 @@ const events = [
         description: "A test of reflexes and survival instincts in an action-packed battle royale.",
         coordinators: [
             { name: "Bhavesh Singhal", contact: "+91 9509173908" },
-            { name: "Raj Birla ", contact: "+91 9829903411" },
-            { name: "Dhruv", contact: "+91 8800166817" }
+            { name: "Raj Birla ", contact: "+91 9829903411" }
         ]
     },
     {
