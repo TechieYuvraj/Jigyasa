@@ -246,6 +246,13 @@ document.addEventListener("DOMContentLoaded", function () {
 document.querySelector("form").addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent default form submission
 
+    const submitButton = this.querySelector('button[type="submit"]');
+    if (submitButton.disabled) return; // Prevent multiple submissions
+    submitButton.disabled = true;
+
+    // Show loading spinner
+    document.getElementById("loadingOverlay").style.display = "flex";
+
     const gitCheckbox = document.getElementById("gitStudent");
     const rollNoInput = document.getElementById("rollNo").value.trim();
 
@@ -253,7 +260,9 @@ document.querySelector("form").addEventListener("submit", function (event) {
     if (gitCheckbox.checked) {
         if (!validRollNumbers.includes(rollNoInput)) {
             alert("Invalid Roll Number! Please enter a valid GIT Roll Number.");
-            return; // Stop submission if Roll No is invalid
+            submitButton.disabled = false;
+            document.getElementById("loadingOverlay").style.display = "none";
+            return;
         }
     }
 
@@ -263,15 +272,17 @@ document.querySelector("form").addEventListener("submit", function (event) {
         let rollNo = input.value.trim();
         if (rollNo && !validRollNumbers.includes(rollNo)) {
             invalidRollNumbers.push(rollNo);
-            input.style.border = "2px solid red"; // Highlight invalid field
+            input.style.border = "2px solid red";
         } else {
-            input.style.border = ""; // Reset border if valid
+            input.style.border = "";
         }
     });
 
     if (invalidRollNumbers.length > 0) {
         alert("Invalid Member Roll Numbers: " + invalidRollNumbers.join(", "));
-        return; // Stop submission if any roll number is invalid
+        submitButton.disabled = false;
+        document.getElementById("loadingOverlay").style.display = "none";
+        return;
     }
 
     // Proceed with form submission to the server
@@ -282,7 +293,15 @@ document.querySelector("form").addEventListener("submit", function (event) {
         .then(response => response.text())
         .then(data => {
             alert("Registration Successful!");
-            window.location.href = "index.html"; // Redirect to home
+            window.location.href = "index.html";
         })
-        .catch(error => console.error("Error:", error));
+        .catch(error => {
+            console.error("Error:", error);
+            alert("Something went wrong. Please try again.");
+            submitButton.disabled = false;
+        })
+        .finally(() => {
+            document.getElementById("loadingOverlay").style.display = "none";
+        });
 });
+

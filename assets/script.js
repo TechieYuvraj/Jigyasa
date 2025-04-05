@@ -63,7 +63,7 @@ const events = [
         coordinators: [
             { name: "Gavesh Jain", contact: "+91 7742908700" },
             { name: "Anirudh sharma", contact: "+91 6378865401" },
-            { name: "Raj Gehlot", contact: "+91 9571240742" },
+            { name: "Vineet Kumar", contact: "+91 9928422189" }
         ]
     },
     {
@@ -125,7 +125,8 @@ const events = [
         description: "A test of reflexes and survival instincts in an action-packed battle royale.",
         coordinators: [
             { name: "Bhavesh Singhal", contact: "+91 9509173908" },
-            { name: "Raj Birla ", contact: "+91 9829903411" }
+            { name: "Raj Birla", contact: "+91 9829903411" },
+            { name: "Mayank Aitan", contact: "+91 6375836562" }
         ]
     },
     {
