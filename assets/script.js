@@ -105,6 +105,7 @@ const events = [
         venue: "To be announced",
         image: "images/events/bgmi.jpg",
         ruleBook: "https://drive.google.com/file/d/1JJZs4JYamx-In6no_JFkJsRiJp92MQSa/view?usp=sharing",
+        note: "The rules of BGMI can vary based on the situations.",
         register: "register.html",
         description: "Survival battle royale, where only the best can claim victory.",
         coordinators: [
@@ -123,6 +124,7 @@ const events = [
         ruleBook: "https://drive.google.com/file/d/1CrjssFWotKPZmrMDPTpYXifXiI0lqoat/view?usp=sharing",
         register: "register.html",
         description: "A test of reflexes and survival instincts in an action-packed battle royale.",
+        note: "The rules of Free Fire can vary based on the situations.",
         coordinators: [
             { name: "Bhavesh Singhal", contact: "+91 9509173908" },
             { name: "Raj Birla", contact: "+91 9829903411" },
@@ -139,6 +141,7 @@ const events = [
         ruleBook: "https://drive.google.com/file/d/133orkRjF2QQmcGyVKJm-iqkopXX0m7we/view?usp=sharing",
         register: "register.html",
         description: "Tactical 5v5 shooter where precision and strategy decide the winner.",
+        note: "The rules of Valorant can vary based on the situations.",
         coordinators: [
             { name: "Gavesh Jain", contact: "+91 7742908700" },
             { name: "Satyam Tiwari", contact: "+91 6307074481" },
@@ -209,6 +212,7 @@ function loadEvent(eventId) {
     document.getElementById("rule-book").href = event.ruleBook;
     document.getElementById("register").href = event.register; 
     document.getElementById("event-description").innerText = event.description;
+    document.getElementById("event-note").innerText = event.note;
 
     // Update Coordinator Section
     const coordinatorContainer = document.getElementById("coordinator-section");

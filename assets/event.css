@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap'); /* Using for headings */
 @import url('https://fonts.googleapis.com/css2?family=Iceberg&display=swap'); /* Using for normal text */
 
+.note {
+    color: #00ff00;
+}
+
 /* Event Heading */
 .event-heading {
     font-size: 2rem;
