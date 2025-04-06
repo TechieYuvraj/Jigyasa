@@ -59,7 +59,64 @@
             pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Enter a valid email address">
 
         <label for="collegeName">College Name:</label>
-        <input type="text" id="collegeName" name="collegeName" required><br><br>
+        <input list="colleges" id="collegeName" name="collegeName" required>
+        <datalist id="colleges">
+            <option value="Global Institute of Technology(GIT)">
+            <option value="University of Rajasthan">
+            <option value="Rajasthan University of Health Sciences (RUHS)">
+            <option value="Vivekananda Global University (VGU)">
+            <option value="Manipal University Jaipur">
+            <option value="LNM Institute of Information Technology (LNMIIT)">
+            <option value="JK Lakshmipat University (JKLU)">
+            <option value="Haridev Joshi University of Journalism and Mass Communication">
+            <option value="Jaipur National University (JNU)">
+            <option value="JECRC University">
+            <option value="Jagadguru Ramanandacharya Rajasthan Sanskrit University">
+            <option value="Suresh Gyan Vihar University">
+            <option value="Poornima University">
+            <option value="NIMS University">
+            <option value="Rajasthan Technical University (RTU) - Jaipur Campus">
+            <option value="Rajasthan Institute of Engineering and Technology (RIET)">
+            <option value="Maharishi Arvind University">
+            <option value="IIS University (International College for Girls, ICG)">
+            <option value="Jayoti Vidyapeeth Women's University">
+            <option value="Pratap University">
+            <option value="University of Engineering & Management (UEM), Jaipur">
+            <option value="Malaviya National Institute of Technology (MNIT)">
+            <option value="Poornima College of Engineering">
+            <option value="JECRC College of Engineering">
+            <option value="Maharishi Arvind Institute of Engineering and Technology">
+            <option value="Rajasthan College of Engineering for Women (RCEW)">
+            <option value="Baldev Ram Mirdha Institute of Technology (BMIT)">
+            <option value="Compucom Institute of Information Technology and Management">
+            <option value="Biyani International Institute of Engineering & Technology">
+            <option value="Swami Keshvanand Institute of Technology (SKIT)">
+            <option value="Arya College of Engineering & IT">
+            <option value="Jaipur Engineering College and Research Centre (JECRC)">
+            <option value="Biyani Group of Colleges - Engineering Wing">
+            <option value="Sawai Man Singh Medical College (SMS Medical College)">
+            <option value="National Institute of Ayurveda">
+            <option value="Rajasthan Pharmacy College">
+            <option value="R. A. Podar Institute of Management">
+            <option value="TAPMI School of Business, Manipal University Jaipur">
+            <option value="IPS Business School">
+            <option value="Indian Institute of Health Management Research (IIHMR)">
+            <option value="Institute of Rural Management (IRM, Jaipur)">
+            <option value="Biyani Institute of Science and Management for Girls">
+            <option value="Subodh College (S. S. Jain Subodh P. G. College)">
+            <option value="Rawat PG Girls College">
+            <option value="Stani Memorial PG College (SMPGC)">
+            <option value="Maharani College, University of Rajasthan">
+            <option value="Maharaja College, University of Rajasthan">
+            <option value="Commerce College, University of Rajasthan">
+            <option value="Biyani Group of Colleges - Arts & Science Wing">
+            <option value="Kanoria PG Mahila Mahavidyalaya">
+            <option value="ARCH Academy of Design">
+            <option value="Indian Institute of Crafts and Design (IICD)">
+            <option value="Pearl Academy Jaipur">
+            <option value="International Institute of Hotel Management (IIHM)">
+            <option value="Institute of Hotel Management (IHM), Jaipur">
+        </datalist>
 
         <label class="checkbox">
             I am a student of GIT College
@@ -68,9 +125,19 @@
 
         <div id="rollNoField" style="display: none;">
             <label>Enter Your Roll No:</label>
-            <input type="text" id="rollNo" name="rollNo" />
-            <p style="color: rgb(192, 134, 134);">Kindly contact at 7398226246 if your Roll No is not in the list.</p>
+            <input type="text" id="rollNo" name="rollNo" maxlength="10" style="text-transform: uppercase;" />
+            <p style="color: rgb(192, 134, 134);">
+                Kindly contact at 7398226246 if your Roll No is invalid.
+            </p>
         </div>
+        
+        <script>
+            const rollNoInput = document.getElementById("rollNo");
+            rollNoInput.addEventListener("input", function () {
+                // Convert input to uppercase as the user types
+                this.value = this.value.toUpperCase();
+            });
+        </script>
 
         <div id="memberDetails" class="hidden"></div>
 
