@@ -12,6 +12,7 @@ const events = [
         ruleBook: "https://drive.google.com/file/d/1rumUCNt46tSeWFxb79QoGvpJkV9Sgnp_/view?usp=sharing",
         register: "register.html",
         description: "A platform for innovative thinkers to present groundbreaking ideas that solve real-world problems. Participants pitch their concepts to a panel of judges.",
+        note: "The rules of Ideathon may vary based on the situations.",
         coordinators: [
             { name: "Gavesh Jain", contact: "+91 7742908700" },
             { name: "Anurag Kumar", contact: "+91 8824898063" },
@@ -28,6 +29,7 @@ const events = [
         ruleBook: "https://drive.google.com/file/d/1AT3YW-VE7pNyic5USFi1-5RMEKwlyYrd/view?usp=sharing",
         register: "register.html",
         description: "A battle of intellect and arguments where participants defend or oppose a given topic with logic, evidence, and persuasion.",
+        note: "The rules of Word War may vary based on the situations.",
         coordinators: [
             { name: "Satyam Tiwari", contact: "+91 6307074481" },
             { name: "Mudit Paliwal", contact: "+91 7877065009" },
@@ -44,6 +46,7 @@ const events = [
         ruleBook: "https://drive.google.com/file/d/1XeY53-HXmaOOMOT_yWcCUm8YfD5nKQYp/view?usp=sharing",
         register: "register.html",
         description: "A fast-paced competition where participants have just one minute to deliver a compelling pitch on a given topic or idea.",
+        note: "The rules of Minutes to Pitch may vary based on the situations.",
         coordinators: [
             { name: "Tej Prakash Singh", contact: "+91 7230956167" },
             { name: "Vansh Patel", contact: "+91 9737879397" },
@@ -60,6 +63,7 @@ const events = [
         ruleBook: "https://drive.google.com/file/d/1I5aHBLbFBhmqKOw3YDsge5anfr6LumMs/view?usp=sharing",
         register: "register.html",
         description: "A coding challenge that tests speed, logic, and problem-solving skills within a limited time frame.",
+        note: "The rules of Minutes to Code may vary based on the situations.",
         coordinators: [
             { name: "Gavesh Jain", contact: "+91 7742908700" },
             { name: "Anirudh sharma", contact: "+91 6378865401" },
@@ -76,6 +80,7 @@ const events = [
         ruleBook: "https://drive.google.com/file/d/1wMK3NYEWAErfKAy-sPUgbREtyg4KwmFK/view?usp=sharing",
         register: "register.html",
         description: "A creative event where participants visually express ideas and themes through artistic poster designs.",
+        note: "The rules of Creativita may vary based on the situations.",
         coordinators: [
             { name: "Vedika Sharda", contact: "+91 7339980017" },
             { name: "Aditi Shrivastav", contact: "+91 6261174228" },
@@ -92,6 +97,7 @@ const events = [
         ruleBook: "https://drive.google.com/file/d/1uDIVS-TN5zHrrAnkIOr7K76btL6XL0ha/view?usp=sharing",
         register: "register.html",
         description: "Design and construct a sturdy bridge using limited resources. Test your creativity, engineering skills, and structural strength to see if your bridge can withstand the ultimate challenge!",
+        note: "The rules of Bridge Maniya may vary based on the situations.",
         coordinators: [
             { name: "Saksham Garg", contact: "+91 6378322020" },
             { name: "Sakshi Saxena", contact: "+91 6378168972" }
@@ -105,7 +111,7 @@ const events = [
         venue: "To be announced",
         image: "images/events/bgmi.jpg",
         ruleBook: "https://drive.google.com/file/d/1JJZs4JYamx-In6no_JFkJsRiJp92MQSa/view?usp=sharing",
-        note: "The rules of BGMI can vary based on the situations.",
+        note: "The rules of BGMI may vary based on the situations.",
         register: "register.html",
         description: "Survival battle royale, where only the best can claim victory.",
         coordinators: [
@@ -124,7 +130,7 @@ const events = [
         ruleBook: "https://drive.google.com/file/d/1CrjssFWotKPZmrMDPTpYXifXiI0lqoat/view?usp=sharing",
         register: "register.html",
         description: "A test of reflexes and survival instincts in an action-packed battle royale.",
-        note: "The rules of Free Fire can vary based on the situations.",
+        note: "The rules of Free Fire may vary based on the situations.",
         coordinators: [
             { name: "Bhavesh Singhal", contact: "+91 9509173908" },
             { name: "Raj Birla", contact: "+91 9829903411" },
@@ -141,7 +147,7 @@ const events = [
         ruleBook: "https://drive.google.com/file/d/133orkRjF2QQmcGyVKJm-iqkopXX0m7we/view?usp=sharing",
         register: "register.html",
         description: "Tactical 5v5 shooter where precision and strategy decide the winner.",
-        note: "The rules of Valorant can vary based on the situations.",
+        note: "The rules of Valorant may vary based on the situations.",
         coordinators: [
             { name: "Gavesh Jain", contact: "+91 7742908700" },
             { name: "Satyam Tiwari", contact: "+91 6307074481" },
