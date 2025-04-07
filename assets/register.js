@@ -286,7 +286,7 @@ document.querySelector("form").addEventListener("submit", function (event) {
     }
 
     // Proceed with form submission to the server
-    fetch("https://script.google.com/macros/s/AKfycbxlXVSRnTrgZvq0NHC5Y7w5YiSsF-2gc6-Qb32jE9XqIMR1HmsyezypJSId_CHzVAHU/exec", {
+    fetch("https://script.google.com/macros/s/AKfycby4Nmu_iLGDScR8MNf_aEWA6t9Zfhs1SEH9cAK56poubgNR6RGQqLD2kDQlrtxFDQ0U/exec", {
         method: "POST",
         body: new FormData(this)
     })
