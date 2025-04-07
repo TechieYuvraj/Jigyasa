@@ -207,7 +207,7 @@ document.getElementById("generateQR").addEventListener("click", function () {
     });
 });
 
-import { validRollNumbers } from "./rollNumbers.js?v=1.1"; // Adjust the path if needed
+import { validRollNumbers } from "./rollNumbers.js?v=1.2"; // Adjust the path if needed
 
 document.addEventListener("DOMContentLoaded", function () {
     const gitCheckbox = document.getElementById("gitStudent");
@@ -286,7 +286,7 @@ document.querySelector("form").addEventListener("submit", function (event) {
     }
 
     // Proceed with form submission to the server
-    fetch("https://script.google.com/macros/s/AKfycbwFR2OoNLEfahXbdY4ND_Q_erx4Xsshd7bxr-xCd-7z9E57nQGHEuNC68GrFScbzbjz/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbxlXVSRnTrgZvq0NHC5Y7w5YiSsF-2gc6-Qb32jE9XqIMR1HmsyezypJSId_CHzVAHU/exec", {
         method: "POST",
         body: new FormData(this)
     })
