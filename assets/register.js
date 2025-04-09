@@ -293,7 +293,7 @@ document.querySelector("form").addEventListener("submit", function (event) {
         .then(response => response.text())
         .then(data => {
             alert("Registration Successful!");
-            window.location.href = "index.html";
+            window.location.href = "https://rtunotes.in";
         })
         .catch(error => {
             console.error("Error:", error);
