@@ -157,7 +157,7 @@ function updateMemberFields(teamSize) {
                 <label>Member ${i} Phone No.:</label>
                 <input type="tel" name="memberPhone${i}" class="memberPhone" required pattern="[0-9]{10}" title="Enter 10-digit phone number"><br><br>
                 <label>Member ${i} Roll No.:</label>
-                <input type="text" name="memberRollNo${i}" class="memberRollNo"><br><br>
+                <input type="text" name="memberRollNo${i}" class="memberRollNo" placeholder = "Only for the students of GIT College"><br><br>
             `;
             memberDetails.appendChild(div);
         }
