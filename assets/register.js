@@ -218,6 +218,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const qrCodeContainer = document.getElementById("qrCodeContainer");
     const gitpayment = document.getElementById("gitpayment");
     const gitUTR = document.getElementById("gitUTR");
+    const memberRollNoFields = document.querySelectorAll(".memberRollNo");
 
     // Toggle visibility based on GIT checkbox
     gitCheckbox.addEventListener("change", function () {
@@ -230,6 +231,11 @@ document.addEventListener("DOMContentLoaded", function () {
             gitpayment.style.display = "none"; // Hide GIT label
             gitUTR.style.display = "none"; // Hide UTR label
             utrField.removeAttribute("required");
+
+            // Show member roll no fields
+            memberRollNoFields.forEach(field => {
+                field.style.display = "block";
+            });
         } else {
             rollNoField.style.display = "none";
             utrField.style.display = "block";
@@ -239,6 +245,11 @@ document.addEventListener("DOMContentLoaded", function () {
             gitpayment.style.display = "block"; // Show GIT label
             gitUTR.style.display = "block"; // Show UTR label
             utrField.setAttribute("required", "true");
+
+            // Hide member roll no fields
+            memberRollNoFields.forEach(field => {
+                field.style.display = "none";
+            });
         }
     });
 });

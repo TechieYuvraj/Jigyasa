@@ -145,9 +145,19 @@
         <div id="memberDetails" class="hidden"></div>
 
         <label id="gitpayment">Payment:</label>
-        <a id="paymentLink" href="#" target="_blank">Pay Now</a>
+        <a id="paymentLink" href="#" target="_blank" onclick="handlePaymentClick()">Pay Now</a>
 
-        <button id="generateQR">Click to Scan</button>
+        <script>
+            function handlePaymentClick() {
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            if (!isMobile) {
+                alert("Only to be clicked on mobile Phones");
+                event.preventDefault();
+            }
+            }
+        </script>
+
+        <button id="generateQR">Click to Scan and Pay</button>
         <div id="qrCodeContainer" style="margin-top: 10px;"></div>
 
         <label id="gitUTR">UTR Number:</label>
