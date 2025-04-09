@@ -232,10 +232,6 @@ document.addEventListener("DOMContentLoaded", function () {
             gitUTR.style.display = "none"; // Hide UTR label
             utrField.removeAttribute("required");
 
-            // Show member roll no fields
-            memberRollNoFields.forEach(field => {
-                field.style.display = "block";
-            });
         } else {
             rollNoField.style.display = "none";
             utrField.style.display = "block";
@@ -245,11 +241,6 @@ document.addEventListener("DOMContentLoaded", function () {
             gitpayment.style.display = "block"; // Show GIT label
             gitUTR.style.display = "block"; // Show UTR label
             utrField.setAttribute("required", "true");
-
-            // Hide member roll no fields
-            memberRollNoFields.forEach(field => {
-                field.style.display = "none";
-            });
         }
     });
 });
