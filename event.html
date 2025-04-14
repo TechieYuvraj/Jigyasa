@@ -22,6 +22,36 @@
 </head>
 
 <body>
+
+    <!-- Info Slider (below header) -->
+    <div class="w-full bg-yellow-400 border-t border-b border-yellow-300 overflow-hidden">
+        <div class="whitespace-nowrap animate-marquee py-2 text-sm font-medium text-yellow-900">
+            🧙 Welcome to JIGYASA 2k25, our Technical Fest! &nbsp;&nbsp;&nbsp;
+            🧙 The events will be streamed live of youtube! &nbsp;&nbsp;&nbsp;
+            🔔 Registration is open for all events! &nbsp;&nbsp;&nbsp;
+            🎉 On-spot registrations are also available! &nbsp;&nbsp;&nbsp;
+            🔔 Join us for an unforgettable experience! &nbsp;&nbsp;&nbsp;
+            🎉 Get ready to showcase your talent!
+        </div>
+    </div>
+
+    <style>
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .animate-marquee {
+            display: inline-block;
+            animation: marquee 15s linear infinite;
+        }
+    </style>
+
     <!-- partial:index.partial.html -->
     <pointer-particles></pointer-particles>
 
