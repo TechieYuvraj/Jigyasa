@@ -1,0 +1,18 @@
+h1 {
+    font-size: 60px;
+    text-align: center;
+}
+
+body {
+    background-image: url('../images/theme/JigyasaBG.png');
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.error {
+    display: block;
+    justify-content: center;
+}

@@ -10,7 +10,7 @@ const events = [
         venue: "To be announced",
         image: "images/events/ideathon.png",
         ruleBook: "https://drive.google.com/file/d/1NOCBTRhAKqEsiHU9Cs3HK3oYjENzPinU/view?usp=sharing",
-        register: "register.html",
+        register: "registration.html",
         description: "A platform for innovative thinkers to present groundbreaking ideas that solve real-world problems. Participants pitch their concepts to a panel of judges.",
         note: "The rules of Ideathon may vary based on the situations.",
         coordinators: [
@@ -27,7 +27,7 @@ const events = [
         venue: "To be announced",
         image: "images/events/debate.png",
         ruleBook: "https://drive.google.com/file/d/1vTXOWecKXBB1MkbEHJfDci2lqfqOsmp8/view?usp=drive_link",
-        register: "register.html",
+        register: "registration.html",
         description: "A battle of intellect and arguments where participants defend or oppose a given topic with logic, evidence, and persuasion.",
         note: "The rules of Word War may vary based on the situations.",
         coordinators: [
@@ -44,7 +44,7 @@ const events = [
         venue: "To be announced",
         image: "images/events/minute-to-pitch.png",
         ruleBook: "https://drive.google.com/file/d/1Lr1cuxAjfG2d1SCLNY8aK1vL_JBnU8Eb/view?usp=drive_link",
-        register: "register.html",
+        register: "registration.html",
         description: "A fast-paced competition where participants have just one minute to deliver a compelling pitch on a given topic or idea.",
         note: "The rules of Minutes to Pitch may vary based on the situations.",
         coordinators: [
@@ -61,7 +61,7 @@ const events = [
         venue: "To be announced",
         image: "images/events/MinuteToCode.png",
         ruleBook: "https://drive.google.com/file/d/1YIk_UkV_EnRNk1kI49N86xvxzW8jVy_d/view?usp=drive_link",
-        register: "register.html",
+        register: "registration.html",
         description: "A coding challenge that tests speed, logic, and problem-solving skills within a limited time frame.",
         note: "The rules of Minutes to Code may vary based on the situations.",
         coordinators: [
@@ -78,7 +78,7 @@ const events = [
         venue: "To be announced",
         image: "images/events/posterdesign.png",
         ruleBook: "https://drive.google.com/file/d/1sBkDYJ7PPizCJ72JI-7s4XHlzt-CY9Fe/view?usp=drive_link",
-        register: "register.html",
+        register: "registration.html",
         description: "A creative event where participants visually express ideas and themes through artistic poster designs.",
         note: "The rules of Creativita may vary based on the situations.",
         coordinators: [
@@ -95,7 +95,7 @@ const events = [
         venue: "To be announced",
         image: "images/events/bridge-mania.png",
         ruleBook: "https://drive.google.com/file/d/1TJTmbu9R7FeoNItORQRZjotuaF-urDdN/view?usp=sharing",
-        register: "register.html",
+        register: "registration.html",
         description: "Design and construct a sturdy bridge using limited resources. Test your creativity, engineering skills, and structural strength to see if your bridge can withstand the ultimate challenge!",
         note: "The rules of Bridge Maniya may vary based on the situations.",
         coordinators: [
@@ -112,7 +112,7 @@ const events = [
         image: "images/events/bgmi.jpg",
         ruleBook: "https://drive.google.com/file/d/1l5xuENoh2CGaM5UHdVeWjw-M7Ivgkxzv/view?usp=drive_link",
         note: "The rules of BGMI may vary based on the situations.",
-        register: "register.html",
+        register: "registration.html",
         description: "Survival battle royale, where only the best can claim victory.",
         coordinators: [
             { name: "Yuvraj Pratap Singh", contact: "+91 739826246" },
@@ -128,7 +128,7 @@ const events = [
         venue: "To be announced",
         image: "images/events/free-fire.webp",
         ruleBook: "https://drive.google.com/file/d/1bGPqD6nFqUZXVd3c_bW2aLfBV8IGJquv/view?usp=drive_link",
-        register: "register.html",
+        register: "registration.html",
         description: "A test of reflexes and survival instincts in an action-packed battle royale.",
         note: "The rules of Free Fire may vary based on the situations.",
         coordinators: [
@@ -145,7 +145,7 @@ const events = [
         venue: "To be announced",
         image: "images/events/valorant.png",
         ruleBook: "https://drive.google.com/file/d/1DUulO4VMndWwwLRoQcHhqGp7O5eKo7rz/view?usp=drive_link",
-        register: "register.html",
+        register: "registration.html",
         description: "Tactical 5v5 shooter where precision and strategy decide the winner.",
         note: "The rules of Valorant may vary based on the situations.",
         coordinators: [
